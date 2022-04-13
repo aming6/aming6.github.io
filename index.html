@@ -1,664 +1,225 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.1.0">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/blog/css/main.css">
-
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
-
-<script class="next-config" data-name="main" type="application/json">{"hostname":"a-xiaoming.gitee.io","root":"/blog/","images":"/blog/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/blog/js/config.js"></script>
-
-    <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>小明の博客</title><meta name="author" content="xiaoming"><meta name="copyright" content="xiaoming"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="归途也还可爱">
+<meta property="og:type" content="website">
 <meta property="og:title" content="小明の博客">
 <meta property="og:url" content="https://a-xiaoming.gitee.io/blog/index.html">
 <meta property="og:site_name" content="小明の博客">
+<meta property="og:description" content="归途也还可爱">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://a-xiaoming.gitee.io/blog/img/avatar.jpg">
 <meta property="article:author" content="xiaoming">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://a-xiaoming.gitee.io/blog/img/avatar.jpg"><link rel="shortcut icon" href="/blog/img/favicon.png"><link rel="canonical" href="https://a-xiaoming.gitee.io/blog/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/blog/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/blog/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小明の博客',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-04-13 21:44:45'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-<link rel="canonical" href="https://a-xiaoming.gitee.io/blog/">
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
 
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
 
-
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
-
-<script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>小明の博客</title>
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-
-
-
-
-
-  <noscript>
-    <link rel="stylesheet" href="/blog/css/noscript.css">
-  </noscript>
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/blog/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">小明の博客</h1>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-    </div>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/blog/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">0</span></a></li><li class="menu-item menu-item-categories"><a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">0</span></a></li><li class="menu-item menu-item-archives"><a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">3</span></a></li><li class="menu-item menu-item-schedule"><a href="/blog/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li>
-  </ul>
-</nav>
-
-
-
-
-</div>
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-overview-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">xiaoming</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-        <a href="/blog/archives/">
-          <span class="site-state-item-count">3</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-  </nav>
-</div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
-
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/blog/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="data-item"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/blog/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/blog/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/blog/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/blog/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('/blog/img/background.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/blog/">小明の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/blog/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/blog/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/blog/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/blog/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/blog/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/blog/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/blog/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/blog/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/blog/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/blog/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">小明の博客</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/blog/2022/04/10/Maven/" title="无题"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="无题"></a></div><div class="recent-post-info"><a class="article-title" href="/blog/2022/04/10/Maven/" title="无题">无题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-04-10T12:43:30.711Z" title="发表于 2022-04-10 20:43:30">2022-04-10</time></span></div><div class="content">Maven简介Maven是什么Maven的本质是一个项目管理工具，将项目开发和管理过程抽象成一个项目对象模型（POM）
+POM（Project Object Model）：项目对象模型
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
+Maven的作用项目构建：提供标准的、跨平台的自动化项目构建方式
+依赖管理：方便快捷的管理项目依赖的资源(jar包)，避免资源间的版本冲突问题
+统一开发结构：提供标准的、统一的项目结构
+Maven的下载与配置一、需要准备的东西确定电脑上已经成功安装JDK
+二、去官网下载Maven下载bin.zip压缩包，直接解压到无中文路径下  下载地址
+注意：Maven3.2.*版本需要JDK1.6的支持，Maven3.3.*以上需要JDK1.7以上的支持
+三、配置Maven环境变量1.在我的电脑——-属性——-高级系统设置———环境变量———系统变量——–新建
+新建环境变量MAVEN_HOME,变量值填 Maven安装的路径目录
 
+2.编辑环境变量Path，追加：%MAVEN_HOME%\bin\
 
-    <div class="main-inner index posts-expand">
+3.至此，我们可以通过打开cmd窗口输入“mvn -v”检查一下我们是否安装成功，如显示以下界面，表示Maven已 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/blog/2022/03/24/%E4%BD%BF%E7%94%A8PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/" title="使用PicGo + Gitee(码云)实现markdown图床"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="使用PicGo + Gitee(码云)实现markdown图床"></a></div><div class="recent-post-info"><a class="article-title" href="/blog/2022/03/24/%E4%BD%BF%E7%94%A8PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/" title="使用PicGo + Gitee(码云)实现markdown图床">使用PicGo + Gitee(码云)实现markdown图床</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-24T09:56:25.784Z" title="发表于 2022-03-24 17:56:25">2022-03-24</time></span></div><div class="content">前言：最近正在搞个人博客，想在自己博客中插入的图片链接随时随地在线预览，然后在网上找到了知乎的LeonG分享的相关文章，用图床来实现。
 
-    
+图床是干什么的？图床就是一个便于在博文中插入在线图片连接的个人图片仓库。设置图床之后，在自己博客中插入的图片链接就可以随时随地在线预览了，并且不会因为任何意外原因无法查看，除非自己亲自删除。
 
+神奇的PicGo就是为了解决这个问题诞生的，它可以将图片上传到指定的图床上，然后返回markdown链接，直接粘贴到你的文档中，就搞定啦
+问题又来了，网上推荐七牛云阿里云都是要租赁服务器的，太麻烦还要钱，微博现在挂链接又很厉害。大部分人选择用github，但是github虽好却是国外的网站，速度终究比不上国内网站，研究了小半天，最终决定使用PicGo + 国内的github - 码云来实现markdown图床
+废话说到这里，开始进入正题
 
-<div class="post-block">
-  
-  
+安装
+首先下载 picgo安装包
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a-xiaoming.gitee.io/blog/2022/03/24/%E4%BD%BF%E7%94%A8PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/">
+速度有点慢，没关系（想要更快可以自行百度下载油猴插件）
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="xiaoming">
-    </span>
+安装之后打开主界面，选择最底下的插件设置，搜索gitee
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小明の博客">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 小明の博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/blog/2022/03/24/%E4%BD%BF%E7%94%A8PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/" class="post-title-link" itemprop="url">使用PicGo + Gitee(码云)实现markdown图床</a>
-        </h2>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2022-03-24 17:56:25" itemprop="dateCreated datePublished" datetime="2022-03-24T17:56:25+08:00">2022-03-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-26 18:58:09" itemprop="dateModified" datetime="2022-03-26T18:58:09+08:00">2022-03-26</time>
-    </span>
+点击安装gitee-uploader 1.1.2开始安装
 
-  
-</div>
 
-        </div>
-      </header>
+这里 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/blog/2022/03/23/%E4%BD%BF%E7%94%A8Hexo-Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="使用Hexo +Gitee搭建个人博客"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="使用Hexo +Gitee搭建个人博客"></a></div><div class="recent-post-info"><a class="article-title" href="/blog/2022/03/23/%E4%BD%BF%E7%94%A8Hexo-Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="使用Hexo +Gitee搭建个人博客">使用Hexo +Gitee搭建个人博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-23T08:29:18.000Z" title="发表于 2022-03-23 16:29:18">2022-03-23</time></span></div><div class="content">前言
+Gitee Pagas要实名认证了，可先去注册Gitee先实名认证
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a><strong>前言</strong>：</h2><p>最近正在搞个人博客，想在自己博客中插入的图片链接随时随地在线预览，然后在网上找到了知乎的LeonG分享的相关文章，用图床来实现。</p>
-<blockquote>
-<p>图床是干什么的？<br>图床就是一个便于在博文中插入在线图片连接的个人图片仓库。设置图床之后，在自己博客中插入的图片链接就可以随时随地在线预览了，并且不会因为任何意外原因无法查看，除非自己亲自删除。</p>
-</blockquote>
-<p>神奇的<strong>PicGo</strong>就是为了解决这个问题诞生的，它可以将图片上传到指定的图床上，然后返回markdown链接，直接粘贴到你的文档中，就搞定啦</p>
-<p>问题又来了，网上推荐七牛云阿里云都是要租赁服务器的，太麻烦还要钱，微博现在挂链接又很厉害。大部分人选择用github，但是github虽好却是国外的网站，速度终究比不上国内网站，研究了小半天，最终决定使用PicGo + 国内的github - <a href="https://link.zhihu.com/?target=https://gitee/com">码云</a>来实现markdown图床</p>
-<p>废话说到这里，开始进入正题</p>
-<hr>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul>
-<li>首先下载 <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">picgo安装包</a></li>
-</ul>
-<p>速度有点慢，没关系（想要更快可以自行百度下载油猴插件）</p>
-<ul>
-<li>安装之后打开主界面，选择最底下的插件设置，搜索<strong>gitee</strong></li>
-</ul>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/a1.png"></p>
-<ul>
-<li>点击安装gitee-uploader 1.1.2开始安装</li>
-</ul>
-<blockquote>
-<p>这里注意一下，必须要先安装[node.js]才能安装插件，没装的自己装一下，然后重启就行。</p>
-</blockquote>
-<p>这个里我使用<strong>gitee-uploader 1.1.2</strong> 插件，gitee2.0.5插件上传的时候莫名有点问题。</p>
-<hr>
-<h2 id="建立gitee（码云）图床库"><a href="#建立gitee（码云）图床库" class="headerlink" title="建立gitee（码云）图床库"></a>建立gitee（码云）图床库</h2><p>注册码云的方法很简单，网站引导都是中文，不多说了，我们直接建立自己的图床库。(Gitee Pages 服务现在需要实名认证)</p>
-<p>点击右上角的+号，新建仓库</p>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/a2.png"></p>
-<p><strong>新建仓库的要点如下：</strong></p>
-<ol>
-<li>输入一个仓库名称，点击创建，创建之后显示以下界面，点击<strong>初始化readme文件</strong>（这个选项勾上，这样码云会自动给你的仓库建立master分支，这点很重要！）</li>
-<li>初始化之后点击右边的管理，基本信息那把<strong>开源</strong>勾选保存（需要同意3个条款）</li>
-</ol>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/blog6.jpg"></p>
-<hr>
-<h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><p>安装了<strong>gitee-uploader 1.1.2</strong>插件之后，我们开始配置插件</p>
-<p>配置插件的要点如下：</p>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/a4.png"></p>
-<ul>
-<li><p>repo：用户名&#x2F;仓库名称，比如我自己的仓库a-xiaoming&#x2F;img，找不到的可以直接复制仓库的url</p>
-</li>
-<li><p>branch：分支，这里写上master</p>
-</li>
-<li><p>token：填入码云的私人令牌</p>
-</li>
-<li><p>path：路径，一般写上imges</p>
-</li>
-<li><p>customPath：提交消息，这一项和下一项customURL都不用填。在提交到码云后，会显示提交消息，插件默认提交的是 <code>Upload 图片名 by picGo - 时间</code></p>
-</li>
-</ul>
-<h3 id="获取token"><a href="#获取token" class="headerlink" title="获取token"></a>获取token</h3><ol>
-<li>登录进自己的码云</li>
-<li>点击头像，进入设置</li>
-<li>找到右边安全设置里面的私人令牌</li>
-</ol>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/a5.png"></p>
-<ol start="4">
-<li>点击<code>生成新令牌</code>，把<strong>projects</strong>这一项勾上，其他的不用勾，然后提交</li>
-</ol>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/a6.png"></p>
-<p>这里需要验证一下密码，验证密码之后会出来一串数字，这一串数字就是你的token，将这串数字复制到刚才的配置里面去。</p>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/a7.png"></p>
-<blockquote>
-<p><strong>注意：这个令牌只会明文显示一次，建议在配置插件的时候再来生成令牌，直接复制进去，搞丢了又要重新生成一个。</strong></p>
-</blockquote>
-<p>现在保存你刚才的配置，然后将它设置为默认图床，大功告成。</p>
-<hr>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>随便选一张图片上传（picgo也支持剪贴板上传），试试看，超级快有木有！比github快很多，0.1秒上传，而且导入到你的markdown编辑器里面也是秒识别你的图片内容。</p>
-<p>上传之后默认复制链接，直接粘贴到你的markdown编辑器里，就可以愉快的进行写作了！</p>
-<hr>
-<h2 id="可能出现的一些问题"><a href="#可能出现的一些问题" class="headerlink" title="可能出现的一些问题"></a>可能出现的一些问题</h2><p>这里我挂一个我看到的 <a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_46503920/article/details/117917048">使用PicGo+gitee 搭建图床遇到的一些问题</a></p>
+系统要求
+Windows系统电脑
+Git
+Node.js
 
-      
-    </div>
+安装Git因为我们要用到Git中的Git Bash，类似于Windows的cmd命令行，不过要好用许多(我开始是用cmd按视频的步骤来的，运行命令容易报错)。
 
-    
-    
-    
+下载地址
 
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+安装步骤：双击下载好的exe文件，一路点击next就好了
 
+安装完成之后打开Git Bash，输入
+git version
 
+查看版本：(我这里安装的版本是2.35.1)
+$ git version 
+git version 2.35.1.windows.2 
 
+能看到版本号就说明你安装成功了，之后的命令都是在这里运行的
 
-    
 
+安装Node.jsHexo是基于Node.js制作的静态博客，我们要用到Node.js里面的npm(node package manager)包管理器来安装插件，如果你想玩Hexo博客，那么这个Node.js是必装的。
 
-<div class="post-block">
-  
-  
+下载地址(选择自己电脑版本相对应的包来下载)
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a-xiaoming.gitee.io/blog/2022/03/23/%E4%BD%BF%E7%94%A8Hexo-Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+安装步骤：双击下载好的msi文件，也是一路下一步就好了
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="xiaoming">
-    </span>
+安装完成后打开Git Bash，输 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/blog/2022/03/22/hello-world/" title="Hello World"><img class="post_bg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/blog/2022/03/22/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-22T11:06:44.879Z" title="发表于 2022-03-22 19:06:44">2022-03-22</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post$ hexo new "My New Post"
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小明の博客">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 小明の博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/blog/2022/03/23/%E4%BD%BF%E7%94%A8Hexo-Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">使用Hexo +Gitee搭建个人博客</a>
-        </h2>
+More info: Writing
+Run server$ hexo server
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
+More info: Server
+Generate static files$ hexo generate
 
-      <time title="创建时间：2022-03-23 16:29:18" itemprop="dateCreated datePublished" datetime="2022-03-23T16:29:18+08:00">2022-03-23</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-24 11:22:01" itemprop="dateModified" datetime="2022-03-24T11:22:01+08:00">2022-03-24</time>
-    </span>
+More info: Generating
+Deploy to remote sites$ hexo deploy
 
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li>Gitee Pagas要实名认证了，可先去注册Gitee先实名认证</li>
-</ul>
-<h2 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h2><ul>
-<li>Windows系统电脑</li>
-<li><a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a></li>
-<li><a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a></li>
-</ul>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>因为我们要用到<a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a>中的<a target="_blank" rel="noopener" href="https://git-scm.com/download/win">Git Bash</a>，类似于Windows的cmd命令行，不过要好用许多(我开始是用cmd按视频的步骤来的，运行命令容易报错)。</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://git-scm.com/download/win">下载地址</a></p>
-</li>
-<li><p>安装步骤：双击下载好的exe文件，一路点击next就好了</p>
-</li>
-<li><p>安装完成之后打开Git Bash，输入</p>
-<pre class="line-numbers language-none"><code class="language-none">git version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>查看版本：(我这里安装的版本是2.35.1)</p>
-<pre class="line-numbers language-none"><code class="language-none">$ git version 
-git version 2.35.1.windows.2 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-</li>
-<li><p>能看到版本号就说明你安装成功了，之后的命令都是在这里运行的</p>
-</li>
-</ul>
-<h2 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>是基于<a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a>制作的静态博客，我们要用到Node.js里面的<a target="_blank" rel="noopener" href="https://www.npmjs.cn/">npm</a>(node package manager)包管理器来安装插件，如果你想玩Hexo博客，那么这个Node.js是必装的。</p>
-<ul>
-<li><p><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">下载地址</a>(选择自己电脑版本相对应的包来下载)</p>
-</li>
-<li><p>安装步骤：双击下载好的msi文件，也是一路下一步就好了</p>
-</li>
-<li><p>安装完成后打开Git Bash，输入<code>node -v</code>和<code>npm -v</code>查看node和npm的版本：</p>
-<pre class="line-numbers language-none"><code class="language-none">$ node -v
-v12.14.1
-
-$ npm -v
-6.13.4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>到这里前置步骤就已经算完成了，接下来我们就来安装Hexo博客</p>
-</li>
-</ul>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>，我们需要借助<a target="_blank" rel="noopener" href="https://www.npmjs.cn/">npm</a>这个工具来安装，但是我们国内下载镜像源的速度很慢，所以我们可以先利用npm工具来安装一个<a target="_blank" rel="noopener" href="https://npm.taobao.org/">cnpm</a>工具(国内的淘宝npm镜像源)，这样一来速度会快很多。</p>
-<ul>
-<li><p>安装cnpm：(安装完之后照样可以用’cn’<code>cnpm -v</code>来查看版本号验证是否成功)</p>
-<pre class="line-numbers language-none"><code class="language-none">$ npm install -g cnpm --registry&#x3D;https:&#x2F;&#x2F;registry.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>用cnpm安装Hexo</p>
-<pre class="line-numbers language-none"><code class="language-none">$ cnpm install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p>接着用<code>Hexo -v</code>来验证是否安装成功</p>
-<pre class="line-numbers language-none"><code class="language-none">$ hexo -v
-hexo-cli: 3.1.0
-os: Windows_NT 10.0.17134 win32 x64
-node: 12.14.1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>如果出现以上信息，那么恭喜安装成功了</p>
-</li>
-</ul>
-<h2 id="初始化Hexo"><a href="#初始化Hexo" class="headerlink" title="初始化Hexo"></a>初始化Hexo</h2><ul>
-<li><p>在你的电脑上建一个文件夹，命名没有要求，我这里创建的是blog，文件夹路径也无所谓，最好装在出了系统盘的固态硬盘中，路径要自己找得到。</p>
-</li>
-<li><p>在创建的文件夹目录下右键选择<code>Git Bash Here</code>，也就是在此处打开Git Bash终端</p>
-</li>
-<li><p>输入Hexo初始化命令</p>
-</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">$ hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>这个命令执行需要一定的时间，请耐心等待</p>
-<p>初始化完成之后可以查看指定文件夹目录下有：</p>
-<ol>
-<li>node_modules: 依赖包</li>
-<li>public：存放生成的页面</li>
-<li>scaffolds：生成文章的一些模板</li>
-<li>source：用来存放你的文章</li>
-<li>themes：主题</li>
-<li>_config.yml: 博客的配置文件</li>
-</ol>
-<ul>
-<li>打开Hexo服务</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">$ hexo s
-INFO  Start processing
-INFO  Hexo is running at http:&#x2F;&#x2F;localhost:4000 . Press Ctrl+C to stop.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>这样你就可以再浏览器输入:localhost:4000来访问你的博客啦，使用Ctrl+C可以关闭服务。</p>
-<p>大概是这样：</p>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/blog.jpg"></p>
-<ul>
-<li>用Hexo写一篇博客</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">$ hexo new &quot;我的第一篇博客&quot;
-INFO  Created: E:\bolg\source\_posts\我的第一篇博客.md
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<ul>
-<li>到D:\bolg\source_posts目录下打开我的第一篇博客.md进行编辑(我使用的是Typora)：</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">---
-title: 我的第一篇博客
-date: 2020-02-03 21:16:52
-tags:
----
-
-## 第一章
-
-内容
-
----
-
-
-## 第二章
-
-内容
-
----
-
-## 参考资料
-
-
-https:&#x2F;&#x2F;ouwen.gitee.io<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>注意：这里的md文件是基于markdown语法进行编辑的，不了解的朋友可以百度学习一下，很简单的，几分钟就能看明            白，相信你不是问题。</p>
-<ul>
-<li>编辑完保存文件，重启Hexo服务</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">$ hexo clean          # 清除所有记录 
-$ hexo generate       # 生成静态网页 简写：hexo g
-$ hexo server         # 启动服务 简写：hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>打开浏览器输入localhost:4000：</li>
-</ul>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/blog2.jpg"></p>
-<h2 id="将博客部署到Gitee上"><a href="#将博客部署到Gitee上" class="headerlink" title="将博客部署到Gitee上"></a>将博客部署到Gitee上</h2><p>上面访问的localhost:4000是本地服务器端口，我们的博客不可能是放在本地服务器的，我们需要把博客部署到远端去。我这里推荐的一个免费的部署的方式就是部署到<a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a>上，部署好之后就可以通过访问<a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a>上的那个地址来访问我们的博客。</p>
-<ul>
-<li><p>进到<a target="_blank" rel="noopener" href="https://gitee.com/">Gitee</a>官网，注册账号并登陆</p>
-</li>
-<li><p>点击个人主页右上角新建个人仓库(我这已经创建过了)</p>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/blog3.jpg"></p>
-</li>
-<li><p>点进已经创建的仓库（blog），点击管理，把仓库设置为开源，保存</p>
-<p> <img src="https://gitee.com/a-xiaoming/img/raw/master/imges/blog6.jpg"></p>
-</li>
-<li><p>打开Hexo的配置文件<code>_config.yml</code> <strong>注意冒号后面都有一个空格</strong></p>
- <pre class="line-numbers language-none"><code class="language-none">type: git
-repo: https:&#x2F;&#x2F;gitee.com&#x2F;a-xiaoming&#x2F;blog #仓库的url
-branch: master <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-</li>
-<li><p>这里先安装一个Hexo插件</p>
-<pre class="line-numbers language-none"><code class="language-none">cnpm install hexo-deployer-git --save  #通过cpnm安装git插件
-git config --global user.email &#39;******@qq.com&#39;  #设置gitee邮箱（gitee的注册邮箱）
-git config --global user.name &#39;****&#39;            #设置用户名（gitee的y注册昵称）
-hexo d  #上传到gitee的远端仓库
-# 在上传时，需要再次输入gitee的用户名username和密码password<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-</li>
-<li><p>上传成功仓库会多出一些文件</p>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/blog4.jpg"></p>
-</li>
-<li><p>然后<strong>勾选强制使用HTTPS</strong>，点击启动或更新之后</p>
-</li>
-<li><p>访问Gitee Page服务的网站地址就可以成功将本地的博客部署到了远端仓库，这样你的小伙伴也能在自己的电脑访问你的Gitee Page服务网站看到你的博客啦。</p>
-<p><strong>注意每次更改网页重新上传到仓库都要到这里来更新服务。</strong></p>
-</li>
-</ul>
-<p><img src="https://gitee.com/a-xiaoming/img/raw/master/imges/blog5.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://a-xiaoming.gitee.io/blog/2022/03/22/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/blog/images/avatar.gif">
-      <meta itemprop="name" content="xiaoming">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小明の博客">
-      <meta itemprop="description" content="">
-    </span>
-    
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 小明の博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/blog/2022/03/22/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2022-03-22 19:06:44" itemprop="dateCreated datePublished" datetime="2022-03-22T19:06:44+08:00">2022-03-22</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">xiaoming</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-
-    </div>
-  </footer>
-
-  
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/blog/js/comments.js"></script><script src="/blog/js/utils.js"></script><script src="/blog/js/motion.js"></script><script src="/blog/js/next-boot.js"></script>
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-</body>
-</html>
+More info: Deployment
+</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/blog/img/avatar.jpg" onerror="this.onerror=null;this.src='/blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xiaoming</div><div class="author-info__description">归途也还可爱</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/blog/archives/"><div class="headline">文章</div><div class="length-num">4</div></a></div><div class="card-info-data-item"><a href="/blog/tags/"><div class="headline">标签</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/blog/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/04/10/Maven/" title="无题"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/blog/2022/04/10/Maven/" title="无题">无题</a><time datetime="2022-04-10T12:43:30.711Z" title="发表于 2022-04-10 20:43:30">2022-04-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/03/24/%E4%BD%BF%E7%94%A8PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/" title="使用PicGo + Gitee(码云)实现markdown图床"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="使用PicGo + Gitee(码云)实现markdown图床"/></a><div class="content"><a class="title" href="/blog/2022/03/24/%E4%BD%BF%E7%94%A8PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/" title="使用PicGo + Gitee(码云)实现markdown图床">使用PicGo + Gitee(码云)实现markdown图床</a><time datetime="2022-03-24T09:56:25.784Z" title="发表于 2022-03-24 17:56:25">2022-03-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/03/23/%E4%BD%BF%E7%94%A8Hexo-Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="使用Hexo +Gitee搭建个人博客"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="使用Hexo +Gitee搭建个人博客"/></a><div class="content"><a class="title" href="/blog/2022/03/23/%E4%BD%BF%E7%94%A8Hexo-Gitee%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" title="使用Hexo +Gitee搭建个人博客">使用Hexo +Gitee搭建个人博客</a><time datetime="2022-03-23T08:29:18.000Z" title="发表于 2022-03-23 16:29:18">2022-03-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/blog/2022/03/22/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/blog/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/blog/2022/03/22/hello-world/" title="Hello World">Hello World</a><time datetime="2022-03-22T11:06:44.879Z" title="发表于 2022-03-22 19:06:44">2022-03-22</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/blog/archives/2022/04/"><span class="card-archive-list-date">四月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/blog/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">4</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-13T13:44:45.749Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By xiaoming</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/blog/js/utils.js"></script><script src="/blog/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/blog/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
