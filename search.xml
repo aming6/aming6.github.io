@@ -4,7 +4,20 @@
   
     
     <entry>
-      <title>使用PicGo + Gitee(码云)实现markdown图床</title>
+      <title>Redis哨兵模式</title>
+      <link href="/2022/09/18/Redis%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/"/>
+      <url>/2022/09/18/Redis%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="哨兵模式"><a href="#哨兵模式" class="headerlink" title="哨兵模式"></a>哨兵模式</h1><h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><ul><li><strong>反客为主（当一个master宕机后，后面的slave可以立刻升为master，其后面的slave不用做任何修改。）</strong>的自动版，能够后台监控主机是否故障，如果故障了根据投票数自动将从库转换为主库</li></ul><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20220919170850430-16635785371291.png" alt="image-20220919170850430"></p><h2 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h2><ol><li><p>调整为一主二仆模式，6379带着6380、6381</p></li><li><p>自定义的<code>/myredis</code>目录下新建<code>sentinel.conf</code>文件，<strong>名字绝不能错</strong></p><pre class="line-numbers language-none"><code class="language-none">[root@a myredis]# vi sentinel.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>配置哨兵</p><pre class="line-numbers language-none"><code class="language-none">sentinel monitor mymaster 127.0.0.1 6379 1PS: 其中mymaster为监控对象自定义的服务器名称， 1 为至少有多少个哨兵(启动的sentinel)同意从机切换为主机。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li><li><p>启动哨兵</p><pre class="line-numbers language-none"><code class="language-none">[root@a myredis]# redis-sentinel  &#x2F;myredis&#x2F;sentinel.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol><p><code>当主机挂掉，在从机中产生新的主机。原主机重启后会变为从机（根据优先级别：slave-priority ），原主机重启后会变为从机。</code></p><h2 id="故障恢复"><a href="#故障恢复" class="headerlink" title="故障恢复"></a>故障恢复</h2><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20220919172021991-16635792291332.png" alt="image-20220919172021991"></p><ul><li>优先级在redis.conf中默认：slave-priority 100，值越小优先级越高</li><li>偏移量是指获得原主机数据最全的</li><li>每个redis实例启动后都会随机生成一个40位的runid</li></ul><h2 id="复制延时"><a href="#复制延时" class="headerlink" title="复制延时"></a>复制延时</h2><ul><li>由于所有的写操作都是先在Master上操作，然后同步更新到Slave上，所以从Master同步到Slave机器有一定的延迟，当系统很繁忙的时候，延迟问题会更加严重，Slave机器数量的增加也会使这个问题更加严重。</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>（不能用了！！！）使用PicGo + Gitee(码云)实现markdown图床</title>
       <link href="/2022/07/23/%E4%BD%BF%E7%94%A8PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/"/>
       <url>/2022/07/23/%E4%BD%BF%E7%94%A8PicGo%20+%20Gitee(%E7%A0%81%E4%BA%91)%E5%AE%9E%E7%8E%B0markdown%E5%9B%BE%E5%BA%8A/</url>
       
