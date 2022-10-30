@@ -1,0 +1,532 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JAVA面试题 | 阿明の博客</title><meta name="keywords" content="Java"><meta name="author" content="aming"><meta name="copyright" content="aming"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="JAVA基础面向对象JDK、JRE的区别 JDK：提供了 Java 的开发环境和运行环境。（JRE+JAVA工具包）  JRE：为 Java 的运行提供了所需环境。（JVM+JAVASE标准类库）   简单来说：JDK中包含JRE，JDK中有一个名为jre的目录，里面包含两个文件夹bin和lib，bin就是JVM，lib就是JVM工作所需要的类库。 简单的说说JVMJVM是Java的虚拟机，是J">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA面试题">
+<meta property="og:url" content="http://example.com/2022/10/18/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
+<meta property="og:site_name" content="阿明の博客">
+<meta property="og:description" content="JAVA基础面向对象JDK、JRE的区别 JDK：提供了 Java 的开发环境和运行环境。（JRE+JAVA工具包）  JRE：为 Java 的运行提供了所需环境。（JVM+JAVASE标准类库）   简单来说：JDK中包含JRE，JDK中有一个名为jre的目录，里面包含两个文件夹bin和lib，bin就是JVM，lib就是JVM工作所需要的类库。 简单的说说JVMJVM是Java的虚拟机，是J">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgavatar5.jpg">
+<meta property="article:published_time" content="2022-10-18T02:27:06.000Z">
+<meta property="article:modified_time" content="2022-10-30T13:44:28.132Z">
+<meta property="article:author" content="aming">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgavatar5.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/10/18/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: aming","link":"链接: ","source":"来源: 阿明の博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JAVA面试题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-30 21:44:28'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/background.css"><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/loading.gif" data-original="/img/background.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video faa-float animated"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 动漫</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book faa-float animated"></i><span> 书单</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad faa-float animated"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgavatar5.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">阿明の博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video faa-float animated"></i><span> 影视</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 动漫</span></a></li><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book faa-float animated"></i><span> 书单</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad faa-float animated"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JAVA面试题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-18T02:27:06.000Z" title="发表于 2022-10-18 10:27:06">2022-10-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-30T13:44:28.132Z" title="更新于 2022-10-30 21:44:28">2022-10-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">-笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JAVA面试题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><hr>
+<h1 id="JAVA基础"><a href="#JAVA基础" class="headerlink" title="JAVA基础"></a>JAVA基础</h1><h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h2 id="JDK、JRE的区别"><a href="#JDK、JRE的区别" class="headerlink" title="JDK、JRE的区别"></a>JDK、JRE的区别</h2><ul>
+<li><p>JDK：提供了 Java 的开发环境和运行环境。（JRE+JAVA工具包）</p>
+</li>
+<li><p>JRE：为 Java 的运行提供了所需环境。（JVM+JAVASE标准类库）</p>
+</li>
+</ul>
+<p>简单来说：JDK中包含JRE，JDK中有一个名为jre的目录，里面包含两个文件夹bin和lib，bin就是JVM，lib就是JVM工作所需要的类库。</p>
+<h2 id="简单的说说JVM"><a href="#简单的说说JVM" class="headerlink" title="简单的说说JVM"></a>简单的说说JVM</h2><p>JVM是Java的虚拟机，是Java语言跨平台的关键。JVM由三部分组成：<strong>类加载子系统</strong>，<strong>执行引擎</strong>，<strong>运行时数据区</strong>。</p>
+<ol>
+<li><p>类加载子系统：类加载子系统负责加载class信息，加载的类信息存放于方法区中。</p>
+</li>
+<li><p>执行引擎：负责执行那些包含在被载入类的方法中的指令。</p>
+</li>
+<li><p>当程序运行时，JVM需要内存来存储许多内容，例如：字节码、对象、参数等，JVM会把这些东西都存储到运行时数据区中，以便于管理。</p>
+<p>而运行时数据区又可以分为<strong>方法区</strong>、<strong>堆</strong>、<strong>虚拟机栈</strong>、<strong>本地方法栈</strong>、<strong>程序计数器</strong>。</p>
+</li>
+</ol>
+<h2 id="x3D-x3D-和-equals-的区别是什么？"><a href="#x3D-x3D-和-equals-的区别是什么？" class="headerlink" title="&#x3D;&#x3D; 和 equals 的区别是什么？"></a>&#x3D;&#x3D; 和 <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=equals&spm=1001.2101.3001.7020">equals</a> 的区别是什么？</h2><ul>
+<li><p>&#x3D;&#x3D; 比较基本类型，比较的是值，&#x3D;&#x3D;比较引用类型，比较的是内存地址</p>
+</li>
+<li><p>equlas是Object类的方法，本质上与&#x3D;&#x3D;一样，但是有些类重写了equals方法，比如String的equals被重写后，比较的是字符值。另外重写了equlas后，也必须重写hashcode()方法</p>
+</li>
+</ul>
+<h2 id="final-在-java-中有什么作用？"><a href="#final-在-java-中有什么作用？" class="headerlink" title="final 在 java 中有什么作用？"></a>final 在 java 中有什么作用？</h2><ol>
+<li><p>用来修饰类</p>
+<p>当用final修改类时，该类无法被继承。比如常用的String类就是最终类。</p>
+</li>
+<li><p>用来修饰一个方法</p>
+<p>当使用final修饰方法时，这个方法将无法被子类重写。但是，该方法仍然可以被继承。</p>
+</li>
+<li><p>用来修饰变量</p>
+<p>final修饰变量，如果变量为基本数据类型，则该值不能再改变，如果变量为引用数据类型，则引用地址不能改变，但值可以改变。</p>
+</li>
+</ol>
+<h2 id="String-str-x3D-”i”与-String-str-x3D-new-String-“i”-一样吗？"><a href="#String-str-x3D-”i”与-String-str-x3D-new-String-“i”-一样吗？" class="headerlink" title="String str&#x3D;”i”与 String str&#x3D;new String(“i”)一样吗？"></a>String str&#x3D;”i”与 String str&#x3D;new String(“i”)一样吗？</h2><p>Java中创建字符串有两种方式</p>
+<ul>
+<li><p>第一种是通过String类直接定义一串字符，JVM会将该字符串放在常量池中，如果再用该方法定义一个相同的字符串则JVM会去常量池中寻找是否已有该字符串，没有则会重建一个；如果已有则不会新建，两个字符串的地址相等（用&#x3D;符号会判定为true）；</p>
+</li>
+<li><p>但用new的方式定义字符串相当于在String类中新建了一个对象，用这种方式创建字符串时虽然也是放在常量池中但每次都会新建一个对象放在堆内存中，两个相同字符串的地址不同（用&#x3D;符号会判断为false）。</p>
+</li>
+</ul>
+<h2 id="说说对反射的了解"><a href="#说说对反射的了解" class="headerlink" title="说说对反射的了解"></a>说说对反射的了解</h2><p>反射就是在程序运行期间动态的获取对象的属性和方法的功能叫做反射。</p>
+<p>它能够在程序运行期间，对于任意一个类，都能知道它所有的方法和属性；</p>
+<p>获取Class对象的三种方式：getClass()；xx.class；Class.forName(“xxx”)；</p>
+<p>反射的优缺点： </p>
+<p>优点：运行期间能够动态的获取类，提高代码的灵活性。</p>
+<p> 缺点：性能比直接的Java代码要慢很多。 应用场景：spring的xml配置模式，以及动态代理模式都用到了反射。</p>
+<h2 id="StringBuilder和StringBuffer的区别"><a href="#StringBuilder和StringBuffer的区别" class="headerlink" title="StringBuilder和StringBuffer的区别"></a>StringBuilder和StringBuffer的区别</h2><ol>
+<li>他们都是可变长度的字符串</li>
+<li>StringBuffer  线程安全   效率低</li>
+<li>StringBuilder  线程不安全  效率高</li>
+</ol>
+<h2 id="普通类和抽象类有哪些区别？"><a href="#普通类和抽象类有哪些区别？" class="headerlink" title="普通类和抽象类有哪些区别？"></a>普通类和抽象类有哪些区别？</h2><p>抽象类不能被实例化，由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用</p>
+<p>抽象类可以有抽象方法，只需申明，无须实现，有抽象方法的类一定是抽象类</p>
+<p>抽象类的子类必须实现抽象类中的所有抽象方法，否则子类仍然是抽象类</p>
+<p>抽象方法不能被static、final修饰</p>
+<h2 id="接口和抽象类有什么区别？"><a href="#接口和抽象类有什么区别？" class="headerlink" title="接口和抽象类有什么区别？"></a>接口和抽象类有什么区别？</h2><p>接口使用interface修饰；抽象类使用abstract修饰</p>
+<p>接口不能实例化；抽象类也不能被实例化</p>
+<p>类可以实现多个接口；抽象类只能单继承</p>
+<p>java8之后；接口中可以定义静态方法，静态方法必须有方法体，普通方法没有方法体，需要被实现；</p>
+<p>抽象类中可以包含抽象方法和非抽象方法，非抽象方法需要有方法体</p>
+<p>如果一个类继承了抽象类，如果没有实现所有的抽象方法，子类仍然是抽象类。</p>
+<h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><p>相似点：</p>
+<ol>
+<li>接口和抽象都不能被实例化</li>
+<li>实现接口或者继承抽象类的普通子类都必须实现这些抽象方法</li>
+</ol>
+<p>不同点：</p>
+<ol>
+<li>接口使用interface修饰；抽象类使用abstract修饰</li>
+<li>类可以实现多个接口；抽象类只能单继承</li>
+<li>抽象类可以包含普通方法和代码块；接口里只能包含抽象方法，静态方法和默认方法</li>
+<li>抽象类可以有构造方法，而接口没有</li>
+<li>抽象类中的成员变量可以是各种类型的，而接口的成员变量只能是public、static、final类型的，并且必须赋值</li>
+</ol>
+<h2 id="throw-和-throws-的区别？"><a href="#throw-和-throws-的区别？" class="headerlink" title="throw 和 throws 的区别？"></a>throw 和 throws 的区别？</h2><ol>
+<li><p>throw</p>
+<p>作用在方法内，表示抛出具体异常，由方法体内的语句处理；<br>一定抛出了异常；</p>
+</li>
+<li><p>throws</p>
+<p>作用在方法的声明上，表示抛出异常，由调用者来进行异常处理；<br>可能出现异常，不一定会发生异常；</p>
+</li>
+</ol>
+<h2 id="final、finally、finalize-有什么区别？"><a href="#final、finally、finalize-有什么区别？" class="headerlink" title="final、finally、finalize 有什么区别？"></a>final、finally、finalize 有什么区别？</h2><ul>
+<li><p>final可以修饰类，变量，方法，修饰的类不能被继承，修饰的变量不能重新赋值，修饰的方法不能被重写</p>
+</li>
+<li><p>finally用于抛异常，finally代码块内语句无论是否发生异常，都会在执行finally，常用于一些流的关闭。</p>
+</li>
+<li><p>finalize方法用于垃圾回收。</p>
+</li>
+</ul>
+<h2 id="java-中操作字符串都有哪些类？它们之间有什么区别？"><a href="#java-中操作字符串都有哪些类？它们之间有什么区别？" class="headerlink" title="java 中操作字符串都有哪些类？它们之间有什么区别？"></a>java 中操作字符串都有哪些类？它们之间有什么区别？</h2><ul>
+<li><p>String</p>
+<p>String是不可变对象，每次对String类型的改变时都会生成一个新的对象。</p>
+</li>
+<li><p>StringBuilder</p>
+<p>线程不安全，效率高，多用于单线程。</p>
+</li>
+<li><p>StringBuffer</p>
+<p>线程安全，由于加锁的原因，效率不如StringBuilder，多用于多线程。</p>
+</li>
+</ul>
+<h2 id="Collection-和-Collections-有什么区别？"><a href="#Collection-和-Collections-有什么区别？" class="headerlink" title="Collection 和 Collections 有什么区别？"></a>Collection 和 Collections 有什么区别？</h2><ul>
+<li><p>Collection是最基本的集合接口，Collection派生了两个子接口list和set，分别定义了两种不同的存储方式。</p>
+</li>
+<li><p>Collections是一个包装类，它包含各种有关集合操作的静态方法（对集合的搜索、排序、线程安全化等）。此类不能实例化，就像一个工具类，服务于Collection框架。</p>
+</li>
+</ul>
+<h2 id="重载和重写的区别"><a href="#重载和重写的区别" class="headerlink" title="重载和重写的区别"></a>重载和重写的区别</h2><ul>
+<li><p>重载发生在同一个类中，方法名相同，参数列表、返回值类型或权限修饰符不同</p>
+</li>
+<li><p>重写发生在子类中，方法名、参数列表、返回值类型都相同</p>
+</li>
+<li><p>权限修饰符要大于父类方法，声明异常范围要小于父类方法，但是final和private修饰的方法不可重写</p>
+</li>
+</ul>
+<h2 id="HashMap原理"><a href="#HashMap原理" class="headerlink" title="HashMap原理"></a>HashMap原理</h2><p>HashMap在Jdk1.8以后是基于数组+链表+红黑树来实现的，特点是，key不能重复，可以为null，线程不安全</p>
+<h2 id="想要线程安全的HashMap怎么办？"><a href="#想要线程安全的HashMap怎么办？" class="headerlink" title="想要线程安全的HashMap怎么办？"></a>想要线程安全的HashMap怎么办？</h2><ol>
+<li><p>使用ConcurrentHashMap</p>
+</li>
+<li><p>使用HashTable</p>
+</li>
+<li><p>Collections.synchronizedHashMap()方法</p>
+</li>
+</ol>
+<h2 id="HashTable与HashMap的区别"><a href="#HashTable与HashMap的区别" class="headerlink" title="HashTable与HashMap的区别"></a>HashTable与HashMap的区别</h2><ol>
+<li><p>HashTable的每个方法都用synchronized修饰，因此是线程安全的，但同时读写效率很低</p>
+</li>
+<li><p>HashTable的Key不允许为null，HashMap可以</p>
+</li>
+<li><p>HashTable只对key进行一次hash，HashMap进行了两次Hash</p>
+</li>
+<li><p>HashTable底层使用的数组加链表，HashMap底层使用的是数组加链表加红黑树</p>
+</li>
+</ol>
+<h2 id="ArrayList和LinkedList的区别"><a href="#ArrayList和LinkedList的区别" class="headerlink" title="ArrayList和LinkedList的区别"></a>ArrayList和LinkedList的区别</h2><p>ArrayList底层使用的是动态数组，默认容量为10，当元素数量到达容量时，会生成一个新的数组，大小为前一次的1.5倍，然后将原来的数组copy过来；因为数组在内存中是连续的地址，所以ArrayList查找数据更快，由于扩容机制添加数据效率更低</p>
+<p>LinkedList底层使用的是链表，在内存中是离散的，没有扩容机制；LinkedList在查找数据是需要从头遍历，所以查的慢，但添加数据效率更高</p>
+<h2 id="如何保证ArrayList的线程安全？"><a href="#如何保证ArrayList的线程安全？" class="headerlink" title="如何保证ArrayList的线程安全？"></a>如何保证ArrayList的线程安全？</h2><ol>
+<li><p>使用collentions.synchronizedList（）方法为ArrayList加锁</p>
+</li>
+<li><p>使用Vector，Vector底层与Arraylist相同，但是每个方法都由synchronized修饰，速度很慢</p>
+</li>
+</ol>
+<h2 id="String、StringBuffer、StringBuilder的区别"><a href="#String、StringBuffer、StringBuilder的区别" class="headerlink" title="String、StringBuffer、StringBuilder的区别"></a>String、StringBuffer、StringBuilder的区别</h2><ol>
+<li>String</li>
+</ol>
+<p>String是不可变对象，每次对String类型的改变时都会生成一个新的对象。</p>
+<ol start="2">
+<li>StringBuilder</li>
+</ol>
+<p>线程不安全，效率高，多用于单线程。</p>
+<ol start="3">
+<li>StringBuffer</li>
+</ol>
+<p>线程安全，由于加锁的原因，效率不如StringBuilder，多用于多线程。</p>
+<h2 id="cookie和session的区别"><a href="#cookie和session的区别" class="headerlink" title="cookie和session的区别"></a>cookie和session的区别</h2><p>cookies：存放在客户浏览器中，每次http请求都会携带，通常用来告知服务端两个请求是否来自同一浏览器，单个cookie存储的数据不能超过4k,一般存储数据不能超过20个，</p>
+<p>session：存放在服务器中，相比cookie他的安全性更高，但失效时间较短</p>
+<p>当用户第一次访问服务器时，服务器会返回一个sessionId给浏览器并存入cookie，然后浏览器再次访问服务器会根据cookie中的sessionId去查找对应的session信息，用这套机制来使服务器和客户端进行对话</p>
+<h1 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h1><h2 id="线程和进程的区别"><a href="#线程和进程的区别" class="headerlink" title="线程和进程的区别"></a>线程和进程的区别</h2><p>概念：进程是资源分配的最小单位，线程是cpu调度的最小单位。 </p>
+<p>1.地址空间。进程有独立的地址空间,一个进程可以有多个线程；线程没有自己独立的地址空间，而是共享进程的堆和方法区，但是有自己的程序计数器、虚拟机栈和本地方法栈 。</p>
+<p>2.开销。进程和线程切换的都要进行上下文切换，进程切换上下文的开销远大于线程的上下文切换时间，耗费资源也较大，效率差一些 。</p>
+<p>3.并发。进程粒度要粗，并发性较低，线程的并发性较高。</p>
+<p>4.使用。进程可以独立执行。但是线程不能独立执行，必须依存在一个进程中，由进程提供多个线程的执行控制。</p>
+<h2 id="请你说说多线程"><a href="#请你说说多线程" class="headerlink" title="请你说说多线程"></a>请你说说多线程</h2><p>线程是CPU调度的最小单元，一个进程可以存在多个线程，每个线程有独立的运行栈和程序计数器。</p>
+<p>实现多线程有三种方式：继承Tread类，实现Runable接口；实现Callable接口。</p>
+<p>多线程可以提高程序的相应速度，但是多线同时也会造成内存占用过多，共享资源影响和控制复杂等问题</p>
+<h2 id="说说怎么保证线程安全"><a href="#说说怎么保证线程安全" class="headerlink" title="说说怎么保证线程安全"></a>说说怎么保证线程安全</h2><p>多个线程同时操作共享资源时，就会出现线程安全问题。这时就需要我们使用同步方案保证线程安全，常见的保证线程安全的方式有：<strong>原子类</strong>(底层使用CAS算法实现)、<strong>volatile关键字</strong>(1.可见性、2.防止指令重排、3.不保证原子性)、<strong>Lock类</strong>、<strong>锁</strong>(JUC包下的lock锁)、<strong>synchronized关键字</strong>等保证线程安全，使用ThreadLocal可以为每一个线程单独保存一份数据，避免了多线程访问共享变量。</p>
+<h2 id="请你说说死锁定义及发生的条件"><a href="#请你说说死锁定义及发生的条件" class="headerlink" title="请你说说死锁定义及发生的条件"></a>请你说说死锁定义及发生的条件</h2><p>两个或者两个以上进程互相竞争资源而造成持续等待的情况。若无外力则会一直等待下去，这就叫死锁。</p>
+<p> 死锁产生的条件： </p>
+<p><strong>互斥</strong>：一个资源在同一个时刻只能由一个线程执行 </p>
+<p><strong>请求与保持</strong>：一个线程在请求被占用资源时，对已经获得的资源保持不放。</p>
+<p><strong>循环等待</strong>：若干个进程形成环形链，每个都占用对方申请的下一个资源。 </p>
+<p><strong>不可剥夺条件</strong>：线程对所获得的资源在未使用完时不能被其他线程剥夺，只能自己释放。</p>
+<p>避免死锁的方法就是破坏死锁产生的条件。</p>
+<h2 id="Synchrpnized和lock的区别"><a href="#Synchrpnized和lock的区别" class="headerlink" title="Synchrpnized和lock的区别"></a>Synchrpnized和lock的区别</h2><ol>
+<li><p>synchronized是关键字，lock是一个类</p>
+</li>
+<li><p>synchronized在发生异常时会自动释放锁，lock需要手动释放锁</p>
+</li>
+<li><p>synchronized是可重入锁、非公平锁、不可中断锁，lock的ReentrantLock是可重入锁，可中断锁，可以是公平锁也可以是非公平锁</p>
+</li>
+<li><p>synchronized是JVM层次通过监视器实现的，Lock是通过AQS实现的</p>
+</li>
+</ol>
+<h2 id="sleep-和wait-的区别"><a href="#sleep-和wait-的区别" class="headerlink" title="sleep()和wait()的区别"></a>sleep()和wait()的区别</h2><p> (1)wait()是Object类的方法，sleep()是Thread类的方法</p>
+<p>(2)wait()会释放锁，sleep()不会释放锁</p>
+<p>(3)wait()要在同步方法或者同步代码块中执行，sleep()没有限制</p>
+<p>(4)wait()要调用notify()或notifyall()唤醒,sleep()自动唤醒</p>
+<h2 id="请你说说死锁定义及发生的条件-1"><a href="#请你说说死锁定义及发生的条件-1" class="headerlink" title="请你说说死锁定义及发生的条件"></a>请你说说死锁定义及发生的条件</h2><ol>
+<li><p>两个或以上的线程在执行过程中争夺共享资源造成的一种互相等待对方的锁的现象,若无外力作用,他们都无法继续推进下去,此时这些互相等待的线程就称为死锁状态.</p>
+</li>
+<li><p>产生死锁的必要条件主要有四个: </p>
+<ol>
+<li><p><strong>互斥条件</strong>: 一个资源每次只能被一个线程使用 </p>
+</li>
+<li><p><strong>请求和保持条件</strong>: 一个线程在阻塞等待某个资源时，不释放已占有资源 </p>
+</li>
+<li><p><strong>不剥夺条件</strong>: 一个线程已经获得的资源，在未使用完之前，不能被强行剥夺 </p>
+</li>
+<li><p><strong>环路等待条件</strong>: 若干线程形成头尾相接的循环等待资源关系 这是造成死锁必须要达到的4个条件</p>
+</li>
+</ol>
+<p>如果要避免死锁，只需要不满足其中某一个条件即可。而其中前3个条件是作为锁要符合的条件，所以要避免死锁就需要打破第4个条件，不出现循环等待锁的关系.</p>
+</li>
+</ol>
+<h2 id="进程间通信方式"><a href="#进程间通信方式" class="headerlink" title="进程间通信方式"></a>进程间通信方式</h2><p>进程间通信方式主要包括：管道、命名管道、信号、消息队列、共享内存、内存映射、信号量、Socket</p>
+<h2 id="Redis的数据类型"><a href="#Redis的数据类型" class="headerlink" title="Redis的数据类型"></a>Redis的数据类型</h2><p>redis有五种基本数据类型和三种特殊的常用数据类型。 </p>
+<p>基本数据类型： </p>
+<p><strong>String</strong>:地城是一个动态字符串，支持扩容，存储字符串。</p>
+<p><strong>list</strong>:存储有序可以重复的元素，底层数据结构是双向链表&#x2F;压缩链表。</p>
+<p><strong>hash</strong>:存储的是键值对，底层是ziplist和hash </p>
+<p><strong>set</strong>:存储不可重复的元素，底层数据结构可以是hash和整数数组。 </p>
+<p><strong>zset</strong>:存储的是有序的不可重复的元素，底层是ziplist和跳表。 </p>
+<p>特殊的数据类型： geo hyperloglog bitmap</p>
+<h2 id="乐观锁和悲观锁"><a href="#乐观锁和悲观锁" class="headerlink" title="乐观锁和悲观锁"></a>乐观锁和悲观锁</h2><p><strong>乐观锁</strong>：总是假设最好的情况，就是在程序执行的过程中不会上锁，只有当更新修改的时候会判断一下在此期间有没有人更新了这个数据。可以使用版本号和CAS算法实现，适用多读。 </p>
+<p><strong>悲观锁</strong>：悲观锁总是假设最坏的情况，每次去拿数据是都认为别人会修改，所以每次在拿数据时都会上锁，这样别人想拿这个数据时会阻塞直到拿到锁。mysql数据库的共享锁和排他锁都是悲观锁的实现。</p>
+<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><p>常用的设计模式有<strong>单例模式</strong>、<strong>工厂模式</strong>、<strong>代理模式</strong>、适配器模式、装饰器模式、模板方法模式等等。<strong>像sping中的定义的bean默认为单例模式</strong>，<strong>spring中的BeanFactory用来创建对象的实例，他是工厂模式的体现</strong>。AOP面向切面编程时代理模式的体现，它的底层就是基于动态代理实现的。适配器模式在springMVC中有体现，它的处理器适配器会根据处理器规则适配相应的处理器执行，模板方法模式用来解决代码重复的问题等</p>
+<h2 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h2><p>单例模式的含义：一个类仅有一个实例化对象，其最大特点是构造函数私有化。单例模式主要分为饿汉式，懒汉式，线程安全的懒汉式。其中饿汉式在类加载是就创建了实力对象，但是这样有可能造成资源的浪费；懒汉式，在类第一次被调用时创建实例，这样可能会造成线程安全问题；线程安全的懒汉式，则是在懒汉式的基础上加锁</p>
+<p>懒汉式（线程安全）</p>
+<pre class="line-numbers language-none"><code class="language-none">public class Singleton &#123;  
+    private static Singleton instance;  
+    private Singleton ()&#123;&#125;  
+    public static synchronized Singleton getInstance() &#123;  
+        if (instance &#x3D;&#x3D; null) &#123;  
+            instance &#x3D; new Singleton();  
+        &#125;  
+        return instance;  
+    &#125;  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>双检锁&#x2F;双重校验锁（DCL，即 double-checked locking）</p>
+<pre class="line-numbers language-none"><code class="language-none">public class Singleton &#123;  
+    private volatile static Singleton singleton;  
+    private Singleton ()&#123;&#125;  
+    public static Singleton getSingleton() &#123;  
+    if (singleton &#x3D;&#x3D; null) &#123;  
+        synchronized (Singleton.class) &#123;  
+            if (singleton &#x3D;&#x3D; null) &#123;  
+                singleton &#x3D; new Singleton();  
+            &#125;  
+        &#125;  
+    &#125;  
+    return singleton;  
+    &#125;  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>饿汉式</p>
+<pre class="line-numbers language-none"><code class="language-none">public class Singleton &#123;  
+    private static Singleton instance &#x3D; new Singleton();  
+    private Singleton ()&#123;&#125;  
+    public static Singleton getInstance() &#123;  
+    return instance;  
+    &#125;  
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="什么是Spring？"><a href="#什么是Spring？" class="headerlink" title="什么是Spring？"></a>什么是Spring？</h2><p>Spring是个轻量级的框架，通过IOC达到松耦合的目的，通过AOP可以分离应用业务逻辑和系统服务进行内聚性的开发，不过配置各种组件时比较繁琐，所以后面才出选了SpringBoot的框架。 </p>
+<h2 id="对MVC的理解"><a href="#对MVC的理解" class="headerlink" title="对MVC的理解"></a>对MVC的理解</h2><p>MVC是一种设计模式，将软件分为三层，分别是模型层（Model），视图层（View），控制器层（Controller）。其中模型层代表的是数据；视图层代表的是界面；控制器层代表的是逻辑处理，是连接视图与模型之前的桥梁。降低耦合，便于代码的维护。</p>
+<h2 id="Aop的理解"><a href="#Aop的理解" class="headerlink" title="Aop的理解"></a>Aop的理解</h2><p>AOP面向切面编程。是spring两大核心之一，可以将那些与业务不相关但是很多业务都要调用的代码抽取出来，思想就是不侵入原有代码的情况下对功能进行增强。</p>
+<h2 id="IOC的理解"><a href="#IOC的理解" class="headerlink" title="IOC的理解"></a>IOC的理解</h2><p>IOC：控制反转。将对象的控制权限交给spring管理。之前我们创建对象时用new，现在直接从spring容器中取，维护对象之间的依赖关系，降低对象之间的耦合度。 实现方式为DI依赖注入，有三种注入方式：构造器、setter、接口注入</p>
+<hr>
+<h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><h2 id="MySQL有哪些索引"><a href="#MySQL有哪些索引" class="headerlink" title="MySQL有哪些索引"></a>MySQL有哪些索引</h2><p>主键索引：一张表只能有一个主键索引，主键索引列不能有空值和重复值</p>
+<p>唯一索引：唯一索引不能有相同值，但允许为空	</p>
+<p>普通索引：允许出现重复值</p>
+<p>组合索引：对多个字段建立一个联合索引，减少索引开销，遵循最左匹配原则</p>
+<p>全文索引：myisam引擎支持，通过建立倒排索引提升检索效率，广泛用于搜索引擎</p>
+<h2 id="请你说说MySQL索引-以及它们的好处和坏处"><a href="#请你说说MySQL索引-以及它们的好处和坏处" class="headerlink" title="请你说说MySQL索引,以及它们的好处和坏处"></a>请你说说MySQL索引,以及它们的好处和坏处</h2><p>MySQL索引是一种帮助快速查找数据的数据结构，可以把它理解为书的目录，通过索引能够快速找到数据所在位置。常见的索引数据结构有：Hash表、二叉树</p>
+<p>使用索引增加了数据查找的效率，但是相对的由于索引也需要存储到磁盘，所以增加了存储的压力，并且新增数据时需要同步维护索引。</p>
+<h2 id="哪些情况索引会失效"><a href="#哪些情况索引会失效" class="headerlink" title="哪些情况索引会失效"></a>哪些情况索引会失效</h2><ol>
+<li><p>where条件中有or，除非所有查询条件都有索引，否则失效</p>
+</li>
+<li><p>like查询用%开头，索引失效</p>
+</li>
+<li><p>索引列参与计算，索引失效</p>
+</li>
+<li><p>违背最左匹配原则，索引失效</p>
+</li>
+</ol>
+<p>（5）索引字段发生类型转换，索引失效</p>
+<p>（6）mysql觉得全表扫描更快时（数据少），索引失效</p>
+<h2 id="说说MySQL的事务隔离级别"><a href="#说说MySQL的事务隔离级别" class="headerlink" title="说说MySQL的事务隔离级别"></a>说说MySQL的事务隔离级别</h2><p>在高并发情况下，并发事务会产生脏读、不可重复读、幻读问题，这时需要用隔离级别来控制</p>
+<p>读未提交： 允许一个事务读取另一个事务已提交的数据，可能出现不可重复读，幻读。</p>
+<p>读已提交：只允许事务读取另一个事务没有提交的数据可能出现不可重复读，幻读。</p>
+<p>可重复读： 确保同一字段多次读取结果一致，可能出现欢幻读。</p>
+<p>可串行化： 所有事务逐次执行，没有并发问题</p>
+<h2 id="MySQL事务特性"><a href="#MySQL事务特性" class="headerlink" title="MySQL事务特性"></a>MySQL事务特性</h2><p>原子性：一个事务内的操作统一成功或失败</p>
+<p>一致性：事务前后的数据总量不变</p>
+<p>隔离性：事务与事务之间互相不影响</p>
+<p>持久性：事务一旦提交，发生的改变不可变</p>
+<hr>
+<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="redis为什么快？"><a href="#redis为什么快？" class="headerlink" title="redis为什么快？"></a>redis为什么快？</h2><ol>
+<li><p>完全基于内存操作，数据都存在内存中</p>
+</li>
+<li><p>采用单线程，避免了不必要的上下文切换带来的性能问题，也不用考虑锁的问题</p>
+</li>
+<li><p>基于非阻塞的io多路复用机制</p>
+</li>
+<li><p>数据结构简单，对数据操作简单</p>
+</li>
+</ol>
+<h2 id="说说Redis的数据类型"><a href="#说说Redis的数据类型" class="headerlink" title="说说Redis的数据类型"></a>说说Redis的数据类型</h2><p>redis中常用的五种数据结构：<strong>string</strong>、<strong>list</strong>、<strong>set</strong>、<strong>zset</strong>、<strong>hash</strong>。</p>
+<ul>
+<li>String结构底层是一个简单动态字符串，支持扩容，存储字符串。</li>
+<li>list存储线性有序且可重复的元素，底层数据结构可以是双向链表&#x2F;压缩列表。</li>
+<li>set存储不可重复的元素，底层数据结构可以是hash和整数数组。</li>
+<li>zset存储的是有序不可重复的元素，zset为每个元素添加了一个score属性作为排序依据，底层数据结构可以是ziplist和跳表。</li>
+<li>hash类型存储的是键值对，底层数据结构是ziplist和hash。</li>
+</ul>
+<p>redis会在性能以及节省内存间考虑，选择最适合当前状态的底层数据结构实现</p>
+<h2 id="Redis的持久化策略"><a href="#Redis的持久化策略" class="headerlink" title="Redis的持久化策略"></a>Redis的持久化策略</h2><p>Redis的持久化方式有两种：快照持久化RDB（redis database ）和追加持久化AOF（append only file）</p>
+<p>RDB：Redis的默认持久化机制，在指定时间间隔内将内存中的数据集快照写入磁盘 </p>
+<p>AOF：以日志的形式记录每个写入和删除操作操作，这样在redis崩溃重启时，会读取.aof文件并重新执行一遍，以此来恢复数据， 优先级AOF&gt;RDB</p>
+<h2 id="Redis缓存穿透如何解决？"><a href="#Redis缓存穿透如何解决？" class="headerlink" title="Redis缓存穿透如何解决？"></a>Redis缓存穿透如何解决？</h2><p>缓存穿透是指频繁请求客户端和缓存中都不存在的数据，缓存永远不生效，请求都到达了数据库。</p>
+<p>解决方案：</p>
+<ol>
+<li><p>在接口上做基础校验，比如id&lt;&#x3D;0就拦截</p>
+</li>
+<li><p>缓存空对象：找不到的数据也缓存起来，并设置过期时间，可能会造成短期不一致</p>
+</li>
+<li><p>布隆过滤器：在客户端和缓存之间添加一个过滤器，拦截掉一定不存在的数据请求</p>
+</li>
+</ol>
+<h2 id="Redis如何解决缓存击穿？"><a href="#Redis如何解决缓存击穿？" class="headerlink" title="Redis如何解决缓存击穿？"></a>Redis如何解决缓存击穿？</h2><p>缓存击穿是指一个非常热点key，在某一瞬间失效，导致大量请求到达数据库</p>
+<p>解决方案：</p>
+<ol>
+<li><p>设置热点数据永不过期</p>
+</li>
+<li><p>给缓存重建的业务加上互斥锁，缺点是性能低</p>
+</li>
+</ol>
+<h2 id="Redis如何解决缓存雪崩？"><a href="#Redis如何解决缓存雪崩？" class="headerlink" title="Redis如何解决缓存雪崩？"></a>Redis如何解决缓存雪崩？</h2><p>缓存雪崩是值某一时间大量Key同时失效或redis宕机，导致大量请求到达数据库</p>
+<p>解决方案：</p>
+<ol>
+<li><p>搭建集群保证高可用</p>
+</li>
+<li><p>进行数据预热，给不同的key设置随机的过期时间</p>
+</li>
+<li><p>给缓存业务添加限流降级，通过加锁或队列控制操作redis的线程数量</p>
+</li>
+<li><p>给业务添加多级缓存</p>
+</li>
+</ol>
+<h2 id="Redis如何实现key的过期删除？"><a href="#Redis如何实现key的过期删除？" class="headerlink" title="Redis如何实现key的过期删除？"></a>Redis如何实现key的过期删除？</h2><p>采用的定期删除+惰性删除</p>
+<p>定期删除：Redis每隔一段时间从设置过期时间的key集合中，随机抽取一些key，检查是否过期，	如过期做删除处理；</p>
+<p>惰性删除：Redis在key被访问的时候检查key是否过期，如果过期则删除；</p>
+<h1 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h1><h2 id="SpringCloud常见组件有哪些"><a href="#SpringCloud常见组件有哪些" class="headerlink" title="SpringCloud常见组件有哪些"></a>SpringCloud常见组件有哪些</h2><ul>
+<li>注册中心组件：Nacos、Eureka</li>
+<li>负载均衡组件：Ribbon</li>
+<li>远程调用组件： OpenFeign</li>
+<li>网关组件：Gateway、Zuul</li>
+<li>服务保护组件：Hystrix、Sentinel</li>
+<li>服务配置管理组件：Nacos、SpringCloudConfig</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">aming</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2022/10/18/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/">http://example.com/2022/10/18/JAVA面试题/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">阿明の博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Java/">Java</a></div><div class="post_share"><div class="social-share" data-image="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgavatar5.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/loading.gif" data-original="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/09/19/%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E7%94%A8git%E4%B8%8A%E4%BC%A0%E5%88%B0gitee/"><img class="next-cover" src="/img/loading.gif" data-original="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgavatar5.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">本地文件用git上传到gitee</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/loading.gif" data-original="/img/background.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">aming</div><div class="author-info__description">归途也还可爱</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://aming6.github.io/"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:1838674006@qq.com" target="_blank" title="Email"><i class="fas fa-envelope-open-text"></i></a><a class="social-icon" href="https://aming6.github.io/" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="xpand" style="height:200px;"><canvas class="illo" width="800" height="800" style="max-width: 200px; max-height: 200px; touch-action: none; width: 640px; height: 640px;"></canvas></div><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople1.js"></script><script src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/zdog.dist.js"></script><script id="rendered-js" src="https://fastly.jsdelivr.net/gh/xiaopengand/blogCdn@latest/xzxr/twopeople.js"></script><style>.card-widget.card-announcement {
+margin: 0;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+canvas {
+display: block;
+margin: 0 auto;
+cursor: move;
+}</style><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">JAVA基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.</span> <span class="toc-text">面向对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK%E3%80%81JRE%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.</span> <span class="toc-text">JDK、JRE的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E8%AF%B4%E8%AF%B4JVM"><span class="toc-number">1.3.</span> <span class="toc-text">简单的说说JVM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x3D-x3D-%E5%92%8C-equals-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">&#x3D;&#x3D; 和 equals 的区别是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#final-%E5%9C%A8-java-%E4%B8%AD%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="toc-number">1.5.</span> <span class="toc-text">final 在 java 中有什么作用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-str-x3D-%E2%80%9Di%E2%80%9D%E4%B8%8E-String-str-x3D-new-String-%E2%80%9Ci%E2%80%9D-%E4%B8%80%E6%A0%B7%E5%90%97%EF%BC%9F"><span class="toc-number">1.6.</span> <span class="toc-text">String str&#x3D;”i”与 String str&#x3D;new String(“i”)一样吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E5%AF%B9%E5%8F%8D%E5%B0%84%E7%9A%84%E4%BA%86%E8%A7%A3"><span class="toc-number">1.7.</span> <span class="toc-text">说说对反射的了解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#StringBuilder%E5%92%8CStringBuffer%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.8.</span> <span class="toc-text">StringBuilder和StringBuffer的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E7%B1%BB%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.9.</span> <span class="toc-text">普通类和抽象类有哪些区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.10.</span> <span class="toc-text">接口和抽象类有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.11.</span> <span class="toc-text">接口和抽象类的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#throw-%E5%92%8C-throws-%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.12.</span> <span class="toc-text">throw 和 throws 的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#final%E3%80%81finally%E3%80%81finalize-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.13.</span> <span class="toc-text">final、finally、finalize 有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#java-%E4%B8%AD%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%83%BD%E6%9C%89%E5%93%AA%E4%BA%9B%E7%B1%BB%EF%BC%9F%E5%AE%83%E4%BB%AC%E4%B9%8B%E9%97%B4%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.14.</span> <span class="toc-text">java 中操作字符串都有哪些类？它们之间有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Collection-%E5%92%8C-Collections-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.15.</span> <span class="toc-text">Collection 和 Collections 有什么区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.16.</span> <span class="toc-text">重载和重写的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashMap%E5%8E%9F%E7%90%86"><span class="toc-number">1.17.</span> <span class="toc-text">HashMap原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%83%B3%E8%A6%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84HashMap%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">1.18.</span> <span class="toc-text">想要线程安全的HashMap怎么办？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashTable%E4%B8%8EHashMap%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.19.</span> <span class="toc-text">HashTable与HashMap的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ArrayList%E5%92%8CLinkedList%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.20.</span> <span class="toc-text">ArrayList和LinkedList的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BF%9D%E8%AF%81ArrayList%E7%9A%84%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%EF%BC%9F"><span class="toc-number">1.21.</span> <span class="toc-text">如何保证ArrayList的线程安全？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String%E3%80%81StringBuffer%E3%80%81StringBuilder%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.22.</span> <span class="toc-text">String、StringBuffer、StringBuilder的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cookie%E5%92%8Csession%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.23.</span> <span class="toc-text">cookie和session的区别</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Java%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">Java多线程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E7%A8%8B%E5%92%8C%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.1.</span> <span class="toc-text">线程和进程的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">请你说说多线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4%E6%80%8E%E4%B9%88%E4%BF%9D%E8%AF%81%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8"><span class="toc-number">2.3.</span> <span class="toc-text">说说怎么保证线程安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4%E6%AD%BB%E9%94%81%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%8F%91%E7%94%9F%E7%9A%84%E6%9D%A1%E4%BB%B6"><span class="toc-number">2.4.</span> <span class="toc-text">请你说说死锁定义及发生的条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Synchrpnized%E5%92%8Clock%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.5.</span> <span class="toc-text">Synchrpnized和lock的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sleep-%E5%92%8Cwait-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.6.</span> <span class="toc-text">sleep()和wait()的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4%E6%AD%BB%E9%94%81%E5%AE%9A%E4%B9%89%E5%8F%8A%E5%8F%91%E7%94%9F%E7%9A%84%E6%9D%A1%E4%BB%B6-1"><span class="toc-number">2.7.</span> <span class="toc-text">请你说说死锁定义及发生的条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F"><span class="toc-number">2.8.</span> <span class="toc-text">进程间通信方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.9.</span> <span class="toc-text">Redis的数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%90%E8%A7%82%E9%94%81%E5%92%8C%E6%82%B2%E8%A7%82%E9%94%81"><span class="toc-number">2.10.</span> <span class="toc-text">乐观锁和悲观锁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.11.</span> <span class="toc-text">设计模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-number">2.12.</span> <span class="toc-text">单例模式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Spring"><span class="toc-number">3.</span> <span class="toc-text">Spring</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSpring%EF%BC%9F"><span class="toc-number">3.1.</span> <span class="toc-text">什么是Spring？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9MVC%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">3.2.</span> <span class="toc-text">对MVC的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Aop%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">3.3.</span> <span class="toc-text">Aop的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#IOC%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number">3.4.</span> <span class="toc-text">IOC的理解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MySQL"><span class="toc-number">4.</span> <span class="toc-text">MySQL</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL%E6%9C%89%E5%93%AA%E4%BA%9B%E7%B4%A2%E5%BC%95"><span class="toc-number">4.1.</span> <span class="toc-text">MySQL有哪些索引</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B7%E4%BD%A0%E8%AF%B4%E8%AF%B4MySQL%E7%B4%A2%E5%BC%95-%E4%BB%A5%E5%8F%8A%E5%AE%83%E4%BB%AC%E7%9A%84%E5%A5%BD%E5%A4%84%E5%92%8C%E5%9D%8F%E5%A4%84"><span class="toc-number">4.2.</span> <span class="toc-text">请你说说MySQL索引,以及它们的好处和坏处</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%AA%E4%BA%9B%E6%83%85%E5%86%B5%E7%B4%A2%E5%BC%95%E4%BC%9A%E5%A4%B1%E6%95%88"><span class="toc-number">4.3.</span> <span class="toc-text">哪些情况索引会失效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4MySQL%E7%9A%84%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB"><span class="toc-number">4.4.</span> <span class="toc-text">说说MySQL的事务隔离级别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MySQL%E4%BA%8B%E5%8A%A1%E7%89%B9%E6%80%A7"><span class="toc-number">4.5.</span> <span class="toc-text">MySQL事务特性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Redis"><span class="toc-number">5.</span> <span class="toc-text">Redis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#redis%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%AB%EF%BC%9F"><span class="toc-number">5.1.</span> <span class="toc-text">redis为什么快？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E8%AF%B4Redis%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.2.</span> <span class="toc-text">说说Redis的数据类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E7%9A%84%E6%8C%81%E4%B9%85%E5%8C%96%E7%AD%96%E7%95%A5"><span class="toc-number">5.3.</span> <span class="toc-text">Redis的持久化策略</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%EF%BC%9F"><span class="toc-number">5.4.</span> <span class="toc-text">Redis缓存穿透如何解决？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E7%BC%93%E5%AD%98%E5%87%BB%E7%A9%BF%EF%BC%9F"><span class="toc-number">5.5.</span> <span class="toc-text">Redis如何解决缓存击穿？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9%EF%BC%9F"><span class="toc-number">5.6.</span> <span class="toc-text">Redis如何解决缓存雪崩？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redis%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0key%E7%9A%84%E8%BF%87%E6%9C%9F%E5%88%A0%E9%99%A4%EF%BC%9F"><span class="toc-number">5.7.</span> <span class="toc-text">Redis如何实现key的过期删除？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1"><span class="toc-number">6.</span> <span class="toc-text">微服务</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#SpringCloud%E5%B8%B8%E8%A7%81%E7%BB%84%E4%BB%B6%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="toc-number">6.1.</span> <span class="toc-text">SpringCloud常见组件有哪些</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/10/18/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/" title="JAVA面试题"><img src="/img/loading.gif" data-original="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgavatar5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JAVA面试题"/></a><div class="content"><a class="title" href="/2022/10/18/JAVA%E9%9D%A2%E8%AF%95%E9%A2%98/" title="JAVA面试题">JAVA面试题</a><time datetime="2022-10-18T02:27:06.000Z" title="发表于 2022-10-18 10:27:06">2022-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/19/%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E7%94%A8git%E4%B8%8A%E4%BC%A0%E5%88%B0gitee/" title="本地文件用git上传到gitee"><img src="/img/loading.gif" data-original="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgavatar5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="本地文件用git上传到gitee"/></a><div class="content"><a class="title" href="/2022/09/19/%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E7%94%A8git%E4%B8%8A%E4%BC%A0%E5%88%B0gitee/" title="本地文件用git上传到gitee">本地文件用git上传到gitee</a><time datetime="2022-09-19T02:27:06.000Z" title="发表于 2022-09-19 10:27:06">2022-09-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/18/Redis%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E5%8E%9F%E7%90%86%E5%92%8C%E7%94%A8%E6%B3%95/" title="Redis主从复制原理和用法"><img src="/img/loading.gif" data-original="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimgavatar4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis主从复制原理和用法"/></a><div class="content"><a class="title" href="/2022/09/18/Redis%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6%E5%8E%9F%E7%90%86%E5%92%8C%E7%94%A8%E6%B3%95/" title="Redis主从复制原理和用法">Redis主从复制原理和用法</a><time datetime="2022-09-18T02:27:06.000Z" title="发表于 2022-09-18 10:27:06">2022-09-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/18/Redis%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/" title="Redis哨兵模式"><img src="/img/loading.gif" data-original="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimgavatar.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Redis哨兵模式"/></a><div class="content"><a class="title" href="/2022/09/18/Redis%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/" title="Redis哨兵模式">Redis哨兵模式</a><time datetime="2022-09-18T02:27:06.000Z" title="发表于 2022-09-18 10:27:06">2022-09-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/09/18/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85MySQL/" title="Linux系统下安装MySQL"><img src="/img/loading.gif" data-original="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimgavatar4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux系统下安装MySQL"/></a><div class="content"><a class="title" href="/2022/09/18/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85MySQL/" title="Linux系统下安装MySQL">Linux系统下安装MySQL</a><time datetime="2022-09-18T02:27:06.000Z" title="发表于 2022-09-18 10:27:06">2022-09-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By aming</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body></html>
