@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>notepad++下载及安装步骤</title>
+      <link href="/2023/01/10/notepad++%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+      <url>/2023/01/10/notepad++%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="notepad-下载及安装步骤"><a href="#notepad-下载及安装步骤" class="headerlink" title="notepad++下载及安装步骤"></a>notepad++下载及安装步骤</h1><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p>下载地址<a href="https://notepad-plus.en.softonic.com/download">https://notepad-plus.en.softonic.com/download</a></p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301101512550.png" alt="image-20230110151209419"></p><p>有人反应无法下载，我给网盘放了一份，版本8.4.4的<br>链接：<a href="https://pan.baidu.com/s/17lCiOYGzixkY3YDcNcgijQ?pwd=lhm0">https://pan.baidu.com/s/17lCiOYGzixkY3YDcNcgijQ?pwd=lhm0</a><br>提取码：lhm0</p><h2 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a>2、安装</h2><p>点击exe文件</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301101515118.png" alt="image-20230110151543081"></p><p>选择语音，点击OK</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301101516775.png" alt="image-20230110151646716"></p><p>点击下一步</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301101517032.png" alt="image-20230110151709986"></p><p>点击我接受</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301101528142.png" alt="image-20230110152814091"></p><p>选好安装目录之后点击下一步；点击下一步；点击安装；完成；</p><h2 id="3、汉化"><a href="#3、汉化" class="headerlink" title="3、汉化"></a>3、汉化</h2><p>如果是英文版，可以改配置来实现汉化，settings–&gt;preferences–&gt;general–&gt;选择中文</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301101541841.png" alt="在这里插入图片描述"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -下载安装教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -notepad++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JavaMS</title>
       <link href="/2022/10/18/JavaMS/"/>
       <url>/2022/10/18/JavaMS/</url>
@@ -154,6 +179,31 @@
     
     
     <entry>
+      <title>Typora破解安装教程</title>
+      <link href="/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+      <url>/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Typora破解安装教程"><a href="#Typora破解安装教程" class="headerlink" title="Typora破解安装教程"></a>Typora破解安装教程</h1><p><strong>Typora是很优秀的markdown编辑器。但是现在收费了。</strong></p><p>下面将介绍，如何继续使用免费版的Typora；</p><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p><a href="https://link.zhihu.com/?target=https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw">https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw</a></p><p>提取码：1822</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848767.png" alt="image-20230114120305421"></p><p>下载之后一共三个文件</p><h2 id="2、安装Typora-exe文件"><a href="#2、安装Typora-exe文件" class="headerlink" title="2、安装Typora.exe文件"></a>2、安装Typora.exe文件</h2><h2 id="3、app-aser文件进行替换"><a href="#3、app-aser文件进行替换" class="headerlink" title="3、app.aser文件进行替换"></a>3、app.aser文件进行替换</h2><p>安装好后，可以看到安装目录&#x2F;resources下有一个app.aser文件，使用网盘下载的app.aser文件覆盖掉原先的文件</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848622.png" alt="image-20230114120914292"></p><h2 id="4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦"><a href="#4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦" class="headerlink" title="4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦"></a>4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦</h2><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848122.png" alt="image-20230114121258069"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -下载安装教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -Typora </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Redis应用问题（缓存穿透、缓存击穿、缓存雪崩和分布式锁）</title>
       <link href="/2022/09/18/Redis%E9%AB%98%E5%B9%B6%E5%8F%91%E5%9C%BA%E6%99%AF%E5%BA%94%E7%94%A8%E9%97%AE%E9%A2%98/"/>
       <url>/2022/09/18/Redis%E9%AB%98%E5%B9%B6%E5%8F%91%E5%9C%BA%E6%99%AF%E5%BA%94%E7%94%A8%E9%97%AE%E9%A2%98/</url>
@@ -171,6 +221,31 @@
         <tags>
             
             <tag> -Redis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Maven下载及安装教程</title>
+      <link href="/2022/09/18/maven%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+      <url>/2022/09/18/maven%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><h2 id="一-Maven的下载"><a href="#一-Maven的下载" class="headerlink" title="一 Maven的下载"></a>一 Maven的下载</h2><h3 id="1-选择官网：Apache-Maven"><a href="#1-选择官网：Apache-Maven" class="headerlink" title="1.选择官网：Apache Maven"></a>1.选择官网：<a href="https://maven.apache.org/">Apache Maven</a></h3><p><img src="https://img-blog.csdnimg.cn/20200605104839479.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RhaXN5NzRSSg==,size_16,color_FFFFFF,t_70" alt="img"></p><h3 id="2-找到download-——-Files-——-Binary-zip-archive-（Link）下载"><a href="#2-找到download-——-Files-——-Binary-zip-archive-（Link）下载" class="headerlink" title="2.找到download  —— Files —— Binary zip archive （Link）下载"></a>2.找到download  —— Files —— Binary zip archive （Link）下载</h3><p><img src="https://img-blog.csdnimg.cn/2020060510501510.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RhaXN5NzRSSg==,size_16,color_FFFFFF,t_70" alt="img"></p><h3 id="3-下载完成后放到自己的文件目录下进行直接解压"><a href="#3-下载完成后放到自己的文件目录下进行直接解压" class="headerlink" title="3.下载完成后放到自己的文件目录下进行直接解压"></a>3.下载完成后放到自己的文件目录下进行直接解压</h3><h2 id="二-配置环境变量"><a href="#二-配置环境变量" class="headerlink" title="二 配置环境变量"></a>二 配置环境变量</h2><h3 id="1-进入高级系统设置"><a href="#1-进入高级系统设置" class="headerlink" title="1.进入高级系统设置"></a>1.进入高级系统设置</h3><p>方法1：选择桌面电脑鼠标右击此电脑，点击 属性 进入系统信息界面</p><p>方法2：通过 控制面板，选择 系统和安全，再选择 系统</p><p>在系统信息界面左侧点击 高级系统设置</p><p><img src="https://img-blog.csdnimg.cn/20200220134840797.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RhaXN5NzRSSg==,size_16,color_FFFFFF,t_70" alt="img"></p><h3 id="2-在高级系统设置界面，点击-环境变量"><a href="#2-在高级系统设置界面，点击-环境变量" class="headerlink" title="2.在高级系统设置界面，点击 环境变量"></a>2.在高级系统设置界面，点击 环境变量</h3><p><img src="https://img-blog.csdnimg.cn/20200220134950312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RhaXN5NzRSSg==,size_16,color_FFFFFF,t_70" alt="img"></p><h3 id="3-在-环境变量-的-系统变量-设置两项属性，MAVEN-HOME，Path。若存在则在此基础上编辑，不存在则新建"><a href="#3-在-环境变量-的-系统变量-设置两项属性，MAVEN-HOME，Path。若存在则在此基础上编辑，不存在则新建" class="headerlink" title="3.在 环境变量 的 系统变量 设置两项属性，MAVEN_HOME，Path。若存在则在此基础上编辑，不存在则新建"></a>3.在 环境变量 的 系统变量 设置两项属性，<code>MAVEN_HOME</code>，<code>Path</code>。若存在则在此基础上编辑，不存在则新建</h3><p><img src="https://img-blog.csdnimg.cn/20200220135152506.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RhaXN5NzRSSg==,size_16,color_FFFFFF,t_70" alt="img"></p><h3 id="4-新建-MAVEN-HOME变量，变量值为MAVEN的安装目录"><a href="#4-新建-MAVEN-HOME变量，变量值为MAVEN的安装目录" class="headerlink" title="4.新建 MAVEN_HOME变量，变量值为MAVEN的安装目录"></a>4.新建 MAVEN_HOME变量，变量值为MAVEN的安装目录</h3><p><img src="https://img-blog.csdnimg.cn/20200605105812447.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RhaXN5NzRSSg==,size_16,color_FFFFFF,t_70" alt="img"></p><h3 id="5-编辑-Path-系统变量，新建值-MAVEN-HOME-bin"><a href="#5-编辑-Path-系统变量，新建值-MAVEN-HOME-bin" class="headerlink" title="5.编辑 Path 系统变量，新建值 %MAVEN_HOME%\bin"></a>5.编辑 Path 系统变量，新建值 <code>%MAVEN_HOME%\bin</code></h3><p><img src="https://img-blog.csdnimg.cn/20200605105902250.png" alt="img"></p><h2 id="三、验证是否成功"><a href="#三、验证是否成功" class="headerlink" title="三、验证是否成功"></a>三、验证是否成功</h2><p>按住win + r键，在弹出的运行窗口输入cmd，点击确认，输入<code>mvn -v</code>（或 mvn -version），出现如图所示即成功</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151850241.png" alt="image-20230114143729759"></p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151850735.png" alt="image-20230114143756097"></p><h2 id="四、配置本地仓库"><a href="#四、配置本地仓库" class="headerlink" title="四、配置本地仓库"></a>四、配置本地仓库</h2><h3 id="1-在刚才的maven的同级目录下新建一个Workspace文件，在该文件目录下新建Repository文件夹，该目录用作maven的本地库"><a href="#1-在刚才的maven的同级目录下新建一个Workspace文件，在该文件目录下新建Repository文件夹，该目录用作maven的本地库" class="headerlink" title="1.在刚才的maven的同级目录下新建一个Workspace文件，在该文件目录下新建Repository文件夹，该目录用作maven的本地库"></a>1.在刚才的maven的同级目录下新建一个Workspace文件，在该文件目录下新建Repository文件夹，该目录用作maven的本地库</h3><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151850625.png" alt="image-20230114144110169"></p><h3 id="2-在maven目录下的conf中找到settings-xml，用记事本打开文件，输入以下代码："><a href="#2-在maven目录下的conf中找到settings-xml，用记事本打开文件，输入以下代码：" class="headerlink" title="2.在maven目录下的conf中找到settings.xml，用记事本打开文件，输入以下代码："></a>2.在maven目录下的conf中找到settings.xml，用记事本打开文件，输入以下代码：</h3><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!-- 下面是自己设置的本地仓库位置--></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>localRepository</span><span class="token punctuation">></span></span>Repository文件位置目录<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>localRepository</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="3-由于外网下载jar包速度慢，所以配置阿里云镜像"><a href="#3-由于外网下载jar包速度慢，所以配置阿里云镜像" class="headerlink" title="3.由于外网下载jar包速度慢，所以配置阿里云镜像"></a>3.由于外网下载jar包速度慢，所以配置阿里云镜像</h3><p>在maven目录下的conf中找到settings.xml，用记事本打开文件，在<mirrors></mirrors>标签之间添加输入以下代码：</p><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!-- 设置阿里云镜像--></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirror</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>alimaven<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mirrorOf</span><span class="token punctuation">></span></span>central<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirrorOf</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>aliyun maven<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url</span><span class="token punctuation">></span></span>http://maven.aliyun.com/nexus/content/repositories/central/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>mirror</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://img-blog.csdnimg.cn/20200605144756985.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0RhaXN5NzRSSg==,size_16,color_FFFFFF,t_70" alt="img"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -下载安装教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -Maven </tag>
             
         </tags>
       
@@ -220,7 +295,7 @@
       
         <tags>
             
-            <tag> -OSS </tag>
+            <tag> -图床 </tag>
             
         </tags>
       
@@ -271,6 +346,31 @@
         <tags>
             
             <tag> -gitee </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JDK环境变量配置</title>
+      <link href="/2022/01/10/JDK%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/"/>
+      <url>/2022/01/10/JDK%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<p>jdk安装完成后：</p><ol><li>右键我的电脑属性找到高级属性设置：</li></ol><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301121457487.png" alt="image-20230112145757448"></p><ol start="2"><li>点击环境变量</li></ol><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301121459368.png" alt="image-20230112145912327"></p><ol start="3"><li><p>配置环境变量：</p><p>在系统变量点击 <code>新建</code></p><p>变量名输入：<code>JAVA_HOME</code>(全部大写！)</p><p>变量值输入：盘符：\jdk安装的路径</p></li></ol><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301121515993.png" alt="image-20230112151550950"></p><p>​然后再新建：</p><p>​变量名输入：<code>CLASSPATH</code>（这个也是全部大写！！）</p><p>​变量值输入：<code>.;%JAVA_HOME% \lib</code>（注意是英文格式下：点 分号 百分号JAVA_HOME百分号 反斜杠 lib）千万别写错！~~~</p><p>​然后选中path编辑：</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301121518876.png" alt="image-20230112151845832"></p><p>然后新建输入<code>%JAVA_HOME%\bin</code>（看仔细，千万别多看！！！）</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301121519501.png" alt="image-20230112151905454"></p><p>​然后上移，确定.</p><ol start="4"><li>确认配置成功：</li></ol><p>​win+r：打开运行，输入cmd，回车</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301121520605.png" alt="image-20230112152021570"></p><p>​输入：java 回车（出现下面一堆！）</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301121522304.png" alt="image-20230112152218258"></p><p>OK，配置成功！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -Java </tag>
             
         </tags>
       
