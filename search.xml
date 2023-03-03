@@ -179,31 +179,6 @@
     
     
     <entry>
-      <title>Typora破解安装教程</title>
-      <link href="/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-      <url>/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Typora破解安装教程"><a href="#Typora破解安装教程" class="headerlink" title="Typora破解安装教程"></a>Typora破解安装教程</h1><p><strong>Typora是很优秀的markdown编辑器。但是现在收费了。</strong></p><p>下面将介绍，如何继续使用免费版的Typora；</p><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p><a href="https://link.zhihu.com/?target=https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw">https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw</a></p><p>提取码：1822</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848767.png" alt="image-20230114120305421"></p><p>下载之后一共三个文件</p><h2 id="2、安装Typora-exe文件"><a href="#2、安装Typora-exe文件" class="headerlink" title="2、安装Typora.exe文件"></a>2、安装Typora.exe文件</h2><h2 id="3、app-aser文件进行替换"><a href="#3、app-aser文件进行替换" class="headerlink" title="3、app.aser文件进行替换"></a>3、app.aser文件进行替换</h2><p>安装好后，可以看到安装目录&#x2F;resources下有一个app.aser文件，使用网盘下载的app.aser文件覆盖掉原先的文件</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848622.png" alt="image-20230114120914292"></p><h2 id="4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦"><a href="#4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦" class="headerlink" title="4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦"></a>4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦</h2><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848122.png" alt="image-20230114121258069"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> -下载安装教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> -Typora </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Redis集群</title>
       <link href="/2022/09/18/Redis%E9%9B%86%E7%BE%A4/"/>
       <url>/2022/09/18/Redis%E9%9B%86%E7%BE%A4/</url>
@@ -221,6 +196,31 @@
         <tags>
             
             <tag> -Redis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typora破解安装教程</title>
+      <link href="/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+      <url>/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Typora破解安装教程"><a href="#Typora破解安装教程" class="headerlink" title="Typora破解安装教程"></a>Typora破解安装教程</h1><p><strong>Typora是很优秀的markdown编辑器。但是现在收费了。</strong></p><p>下面将介绍，如何继续使用免费版的Typora；</p><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p><a href="https://link.zhihu.com/?target=https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw">https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw</a></p><p>提取码：1822</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848767.png" alt="image-20230114120305421"></p><p>下载之后一共三个文件</p><h2 id="2、安装Typora-exe文件"><a href="#2、安装Typora-exe文件" class="headerlink" title="2、安装Typora.exe文件"></a>2、安装Typora.exe文件</h2><h2 id="3、app-aser文件进行替换"><a href="#3、app-aser文件进行替换" class="headerlink" title="3、app.aser文件进行替换"></a>3、app.aser文件进行替换</h2><p>安装好后，可以看到安装目录&#x2F;resources下有一个app.aser文件，使用网盘下载的app.aser文件覆盖掉原先的文件</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848622.png" alt="image-20230114120914292"></p><h2 id="4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦"><a href="#4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦" class="headerlink" title="4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦"></a>4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦</h2><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848122.png" alt="image-20230114121258069"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -下载安装教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -Typora </tag>
             
         </tags>
       
