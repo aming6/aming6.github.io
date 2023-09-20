@@ -129,6 +129,31 @@
     
     
     <entry>
+      <title>Linux系统下安装MySQL</title>
+      <link href="/2022/09/18/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85MySQL/"/>
+      <url>/2022/09/18/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85MySQL/</url>
+      
+        <content type="html"><![CDATA[<p><strong>1 查看是否已经安装 Mysql</strong></p><pre class="line-numbers language-none"><code class="language-none">rpm -qa | grep mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果你查看出来有东西，可以使用下面命令将其删除</p><pre class="line-numbers language-none"><code class="language-none">rpm -e 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>2 下载官方 Mysql 包</strong></p><pre class="line-numbers language-none"><code class="language-none">wget -i -c http:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql57-community-release-el7-10.noarch.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008163223422.png" alt="image-20221008163223422"></p><blockquote><p>如果安装有提示：Cannot write to ‘mysql57-community-release-el7-10.noarch.rpm’ (No such file or directory)，那就是权限不够</p><p>可以输入 su root 来解决，然后重新下载。</p></blockquote><p><strong>3 安装MySQL包</strong></p><pre class="line-numbers language-none"><code class="language-none">yum -y install mysql57-community-release-el7-10.noarch.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>4 安装 MySQL</strong></p>  <pre class="line-numbers language-none"><code class="language-none">yum -y install mysql-community-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果执行命令过程中提示：Unable to find a match: mysql-community-server</p><p>则可以通过命令解决</p><pre class="line-numbers language-none"><code class="language-none">yum module disable mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>5启动 Mysql 服务</strong></p><pre class="line-numbers language-none"><code class="language-none">systemctl start mysqld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果没有报错，进入第六步，</p><p>如果执行报错，多半是没有权限，执行下面语句赋予权限，然后重试</p><pre class="line-numbers language-none"><code class="language-none">chown mysql:mysql -R &#x2F;var&#x2F;lib&#x2F;mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>6 查看 Mysql 运行状态</strong></p><pre class="line-numbers language-none"><code class="language-none">service mysqld status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>看见这个绿色就表示启动成功了</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008170143562.png" alt="image-20221008170143562"></p><p><strong>7 查看初始密码（红色部分为初始密码)</strong></p> <pre class="line-numbers language-none"><code class="language-none">grep ‘password’ &#x2F;var&#x2F;log&#x2F;mysqld.log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果能正常查看到，则OK；如果查看不到，则表示没有密码。</p><p><strong>8 进入数据库</strong></p><pre class="line-numbers language-none"><code class="language-none">mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>输入命令后，点击回车，会让你输入密码，然后输入刚刚的初始密码（输密码的时候不可见），当然支持粘贴，你可以复制初始密码后，然后粘贴。如果没有密码，直接回车即可。</p><p><strong>注: 如果显示数据库无法访问</strong></p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008170457217.png" alt="image-20221008170457217"></p><p>修改文件之前记得先关闭mysql服务</p><pre class="line-numbers language-none"><code class="language-none">service mysqld stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>修改MySql配置文件my.cnf，新增skip-grant-tables</p><pre class="line-numbers language-none"><code class="language-none">find &#x2F; -name my.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008170746871.png" alt="image-20221008170746871"></p><p>通过 vi 指令进入文件</p><pre class="line-numbers language-none"><code class="language-none">vi &#x2F;etc&#x2F;my.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008170833326.png" alt="image-20221008170833326"></p><p>新增skip-grant-tables ,添加skip-grant-tables，这样mysql可以免密登录。</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008171121621.png" alt="image-20221008171121621"></p><p>重启服务</p><pre class="line-numbers language-none"><code class="language-none">service mysqld start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>再次连接MySql，重置密码</p><p>任意密码就可以进入了</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008171406615.png" alt="image-20221008171406615"></p><p>通过 show databases; 注意带 ; 号</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008171433125.png" alt="image-20221008171433125"></p><p><strong>切换到mysql数据库</strong>，<strong>重置密码（为 root ）</strong></p><pre class="line-numbers language-none"><code class="language-none">update user set authentication_string&#x3D;password(&#39;root&#39;) where user&#x3D;&#39;root&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>修改配置文件my.cnf，删除skip-grant-tables，重启，再登录</p><p>删除skip-grant-tables</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008171623784.png" alt="image-20221008171623784"></p><p>重启服务</p><pre class="line-numbers language-none"><code class="language-none">service mysqld start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>根据指令进入MySQL数据库</p><pre class="line-numbers language-none"><code class="language-none">mysql -uroot -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>再次使用新密码登录即可至此！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>IDEA破解安装教程</title>
       <link href="/2022/09/18/IDEA%E7%A0%B4%E8%A7%A3/"/>
       <url>/2022/09/18/IDEA%E7%A0%B4%E8%A7%A3/</url>
@@ -171,31 +196,6 @@
         <tags>
             
             <tag> -Redis </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Linux系统下安装MySQL</title>
-      <link href="/2022/09/18/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85MySQL/"/>
-      <url>/2022/09/18/Linux%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85MySQL/</url>
-      
-        <content type="html"><![CDATA[<p><strong>1 查看是否已经安装 Mysql</strong></p><pre class="line-numbers language-none"><code class="language-none">rpm -qa | grep mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果你查看出来有东西，可以使用下面命令将其删除</p><pre class="line-numbers language-none"><code class="language-none">rpm -e 文件名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>2 下载官方 Mysql 包</strong></p><pre class="line-numbers language-none"><code class="language-none">wget -i -c http:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql57-community-release-el7-10.noarch.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008163223422.png" alt="image-20221008163223422"></p><blockquote><p>如果安装有提示：Cannot write to ‘mysql57-community-release-el7-10.noarch.rpm’ (No such file or directory)，那就是权限不够</p><p>可以输入 su root 来解决，然后重新下载。</p></blockquote><p><strong>3 安装MySQL包</strong></p><pre class="line-numbers language-none"><code class="language-none">yum -y install mysql57-community-release-el7-10.noarch.rpm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>4 安装 MySQL</strong></p>  <pre class="line-numbers language-none"><code class="language-none">yum -y install mysql-community-server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果执行命令过程中提示：Unable to find a match: mysql-community-server</p><p>则可以通过命令解决</p><pre class="line-numbers language-none"><code class="language-none">yum module disable mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>5启动 Mysql 服务</strong></p><pre class="line-numbers language-none"><code class="language-none">systemctl start mysqld.service<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果没有报错，进入第六步，</p><p>如果执行报错，多半是没有权限，执行下面语句赋予权限，然后重试</p><pre class="line-numbers language-none"><code class="language-none">chown mysql:mysql -R &#x2F;var&#x2F;lib&#x2F;mysql<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>6 查看 Mysql 运行状态</strong></p><pre class="line-numbers language-none"><code class="language-none">service mysqld status<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>看见这个绿色就表示启动成功了</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008170143562.png" alt="image-20221008170143562"></p><p><strong>7 查看初始密码（红色部分为初始密码)</strong></p> <pre class="line-numbers language-none"><code class="language-none">grep ‘password’ &#x2F;var&#x2F;log&#x2F;mysqld.log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果能正常查看到，则OK；如果查看不到，则表示没有密码。</p><p><strong>8 进入数据库</strong></p><pre class="line-numbers language-none"><code class="language-none">mysql -u root -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>输入命令后，点击回车，会让你输入密码，然后输入刚刚的初始密码（输密码的时候不可见），当然支持粘贴，你可以复制初始密码后，然后粘贴。如果没有密码，直接回车即可。</p><p><strong>注: 如果显示数据库无法访问</strong></p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008170457217.png" alt="image-20221008170457217"></p><p>修改文件之前记得先关闭mysql服务</p><pre class="line-numbers language-none"><code class="language-none">service mysqld stop<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>修改MySql配置文件my.cnf，新增skip-grant-tables</p><pre class="line-numbers language-none"><code class="language-none">find &#x2F; -name my.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008170746871.png" alt="image-20221008170746871"></p><p>通过 vi 指令进入文件</p><pre class="line-numbers language-none"><code class="language-none">vi &#x2F;etc&#x2F;my.cnf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008170833326.png" alt="image-20221008170833326"></p><p>新增skip-grant-tables ,添加skip-grant-tables，这样mysql可以免密登录。</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008171121621.png" alt="image-20221008171121621"></p><p>重启服务</p><pre class="line-numbers language-none"><code class="language-none">service mysqld start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>再次连接MySql，重置密码</p><p>任意密码就可以进入了</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008171406615.png" alt="image-20221008171406615"></p><p>通过 show databases; 注意带 ; 号</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008171433125.png" alt="image-20221008171433125"></p><p><strong>切换到mysql数据库</strong>，<strong>重置密码（为 root ）</strong></p><pre class="line-numbers language-none"><code class="language-none">update user set authentication_string&#x3D;password(&#39;root&#39;) where user&#x3D;&#39;root&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>修改配置文件my.cnf，删除skip-grant-tables，重启，再登录</p><p>删除skip-grant-tables</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/imgimage-20221008171623784.png" alt="image-20221008171623784"></p><p>重启服务</p><pre class="line-numbers language-none"><code class="language-none">service mysqld start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>根据指令进入MySQL数据库</p><pre class="line-numbers language-none"><code class="language-none">mysql -uroot -p<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>再次使用新密码登录即可至此！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> -教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> -MySQL </tag>
             
         </tags>
       
@@ -254,31 +254,6 @@
     
     
     <entry>
-      <title>Typora破解安装教程</title>
-      <link href="/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
-      <url>/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Typora破解安装教程"><a href="#Typora破解安装教程" class="headerlink" title="Typora破解安装教程"></a>Typora破解安装教程</h1><p><strong>Typora是很优秀的markdown编辑器。但是现在收费了。</strong></p><p>下面将介绍，如何继续使用免费版的Typora；</p><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p><a href="https://link.zhihu.com/?target=https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw">https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw</a></p><p>提取码：1822</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848767.png" alt="image-20230114120305421"></p><p>下载之后一共三个文件</p><h2 id="2、安装Typora-exe文件"><a href="#2、安装Typora-exe文件" class="headerlink" title="2、安装Typora.exe文件"></a>2、安装Typora.exe文件</h2><h2 id="3、app-aser文件进行替换"><a href="#3、app-aser文件进行替换" class="headerlink" title="3、app.aser文件进行替换"></a>3、app.aser文件进行替换</h2><p>安装好后，可以看到安装目录&#x2F;resources下有一个app.aser文件，使用网盘下载的app.aser文件覆盖掉原先的文件</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848622.png" alt="image-20230114120914292"></p><h2 id="4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦"><a href="#4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦" class="headerlink" title="4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦"></a>4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦</h2><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848122.png" alt="image-20230114121258069"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> -下载安装教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> -Typora </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Redis应用问题（缓存穿透、缓存击穿、缓存雪崩和分布式锁）</title>
       <link href="/2022/09/18/Redis%E9%AB%98%E5%B9%B6%E5%8F%91%E5%9C%BA%E6%99%AF%E5%BA%94%E7%94%A8%E9%97%AE%E9%A2%98/"/>
       <url>/2022/09/18/Redis%E9%AB%98%E5%B9%B6%E5%8F%91%E5%9C%BA%E6%99%AF%E5%BA%94%E7%94%A8%E9%97%AE%E9%A2%98/</url>
@@ -321,6 +296,31 @@
         <tags>
             
             <tag> -Maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typora破解安装教程</title>
+      <link href="/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/"/>
+      <url>/2022/09/18/Typora%E7%A0%B4%E8%A7%A3%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Typora破解安装教程"><a href="#Typora破解安装教程" class="headerlink" title="Typora破解安装教程"></a>Typora破解安装教程</h1><p><strong>Typora是很优秀的markdown编辑器。但是现在收费了。</strong></p><p>下面将介绍，如何继续使用免费版的Typora；</p><h2 id="1、下载"><a href="#1、下载" class="headerlink" title="1、下载"></a>1、下载</h2><p><a href="https://link.zhihu.com/?target=https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw">https://pan.baidu.com/s/13LNgyIMOjm-mhctIsEiySw</a></p><p>提取码：1822</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848767.png" alt="image-20230114120305421"></p><p>下载之后一共三个文件</p><h2 id="2、安装Typora-exe文件"><a href="#2、安装Typora-exe文件" class="headerlink" title="2、安装Typora.exe文件"></a>2、安装Typora.exe文件</h2><h2 id="3、app-aser文件进行替换"><a href="#3、app-aser文件进行替换" class="headerlink" title="3、app.aser文件进行替换"></a>3、app.aser文件进行替换</h2><p>安装好后，可以看到安装目录&#x2F;resources下有一个app.aser文件，使用网盘下载的app.aser文件覆盖掉原先的文件</p><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848622.png" alt="image-20230114120914292"></p><h2 id="4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦"><a href="#4、打开网盘下载的key-txt文件，复制其中随便一行激活码，打开Typora-app激活，输入你的邮箱和激活码就可以激活成功啦" class="headerlink" title="4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦"></a>4、打开网盘下载的key.txt文件，复制其中随便一行激活码，打开Typora app激活，输入你的邮箱和激活码就可以激活成功啦</h2><p><img src="https://a-xiaoming.oss-cn-beijing.aliyuncs.com/img202301151848122.png" alt="image-20230114121258069"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> -下载安装教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> -Typora </tag>
             
         </tags>
       
